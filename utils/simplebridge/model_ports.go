@@ -17,6 +17,6 @@ type Ports struct {
 	// Status of the port (UP or DOWN)
 	Status string `json:"status,omitempty"`
 	// Peer name, such as a network interfaces (e.g., 'veth0') or another cube (e.g., 'br1:port2')
-	Peer string `json:"peer,omitempty"`
+	Peer   string   `json:"peer,omitempty"`
 	Tcubes []string `json:"tcubes,omitempty"`
 }

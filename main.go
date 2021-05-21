@@ -44,6 +44,7 @@ import (
 	"github.com/polycube-network/polycube/src/components/k8s/controllers"
 	//+kubebuilder:scaffold:imports
 )
+
 const (
 	basePath             = "http://127.0.0.1:9000/polycube/v1"
 	vxlanInterface       = "pcn_vxlan"
@@ -51,7 +52,7 @@ const (
 	routerInterface      = "pcn_router"
 	polycubeK8sInterface = "pcn_k8s"
 	polycubeLBInterface  = "pcn_lb"
-	k8sdispatcherName        = "k8sdispatcher"
+	k8sdispatcherName    = "k8sdispatcher"
 
 	vPodsRangeDefault            = "10.10.0.0/16"
 	vtepsRangeDefault            = "10.18.0.0/16"
@@ -63,15 +64,13 @@ var (
 	// node where this instance is running
 	nodeName string
 
-
-	k8sdispatcherAPI 	*k8sdispatcher.K8sdispatcherApiService
-	lbrpAPI 			*lbrp.LbrpApiService
-	routerAPI			*router.RouterApiService
-	simplebridgeAPI 	*simplebridge.SimplebridgeApiService
+	k8sdispatcherAPI *k8sdispatcher.K8sdispatcherApiService
+	lbrpAPI          *lbrp.LbrpApiService
+	routerAPI        *router.RouterApiService
+	simplebridgeAPI  *simplebridge.SimplebridgeApiService
 
 	nodeIP string
-
-	)
+)
 
 var (
 	scheme   = k8sruntime.NewScheme()
@@ -106,27 +105,27 @@ func main() {
 
 	ctrl.SetLogger(zap.New(zap.UseFlagOptions(&opts)))
 	cfgK8sdispatcher := k8sdispatcher.Configuration{BasePath: basePath}
-	srK8sdispatcher  := k8sdispatcher.NewAPIClient(&cfgK8sdispatcher)
-	k8sdispatcherAPI  = srK8sdispatcher.K8sdispatcherApi
+	srK8sdispatcher := k8sdispatcher.NewAPIClient(&cfgK8sdispatcher)
+	k8sdispatcherAPI = srK8sdispatcher.K8sdispatcherApi
 
 	cfglbrp := lbrp.Configuration{BasePath: basePath}
-	srlbrp  := lbrp.NewAPIClient(&cfglbrp)
-	lbrpAPI  = srlbrp.LbrpApi
+	srlbrp := lbrp.NewAPIClient(&cfglbrp)
+	lbrpAPI = srlbrp.LbrpApi
 
 	cfgrouter := router.Configuration{BasePath: basePath}
-	srRouter  := router.NewAPIClient(&cfgrouter)
-	routerAPI  = srRouter.RouterApi
+	srRouter := router.NewAPIClient(&cfgrouter)
+	routerAPI = srRouter.RouterApi
 
 	cfgsimplebridge := simplebridge.Configuration{BasePath: basePath}
-	srSimplebridge  := simplebridge.NewAPIClient(&cfgsimplebridge)
-	simplebridgeAPI  = srSimplebridge.SimplebridgeApi
+	srSimplebridge := simplebridge.NewAPIClient(&cfgsimplebridge)
+	simplebridgeAPI = srSimplebridge.SimplebridgeApi
 
-	nodeName = os.Getenv("K8s_NODE_NAME")
+	nodeName = os.Getenv("K8S_NODE_NAME")
 	if nodeName == "" {
 		panic("K8S_NODE_NAME env variable not found")
 	}
 
-	setupLog.Info("Running in node: %s",nodeName)
+	setupLog.Info("Running in node: %s", nodeName)
 
 	services = make(map[types.UID]service)
 
@@ -147,7 +146,6 @@ func main() {
 		return
 	}
 
-
 	mgr, err := ctrl.NewManager(ctrl.GetConfigOrDie(), ctrl.Options{
 		Scheme:                 scheme,
 		MetricsBindAddress:     metricsAddr,
@@ -156,11 +154,12 @@ func main() {
 		LeaderElection:         enableLeaderElection,
 		LeaderElectionID:       "51cfa751.polycube.io",
 	})
+
 	if err != nil {
 		setupLog.Error(err, "unable to start manager")
 		os.Exit(1)
 	}
-
+	mgr.GetClient()
 	if err = (&controllers.EndpointsReconciler{
 		Client: mgr.GetClient(),
 		Log:    ctrl.Log.WithName("controllers").WithName("Endpoints"),

@@ -13,37 +13,37 @@ import (
 	"bytes"
 	"encoding/json"
 	"encoding/xml"
-	"fmt"
 	"errors"
+	"fmt"
+	"golang.org/x/net/context"
+	"golang.org/x/oauth2"
 	"io"
 	"mime/multipart"
-    "golang.org/x/oauth2"
-    "golang.org/x/net/context"
 	"net/http"
 	"net/url"
-	"time"
 	"os"
 	"path/filepath"
 	"reflect"
 	"regexp"
-	"strings"
-	"unicode/utf8"
 	"strconv"
+	"strings"
+	"time"
+	"unicode/utf8"
 )
 
 var (
 	jsonCheck = regexp.MustCompile("(?i:[application|text]/json)")
-	xmlCheck = regexp.MustCompile("(?i:[application|text]/xml)")
+	xmlCheck  = regexp.MustCompile("(?i:[application|text]/xml)")
 )
 
 // APIClient manages communication with the k8sfilter API API v1.0.0
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
-	cfg 	*Configuration
-	common 	service 		// Reuse a single struct instead of allocating one for each service on the heap.
+	cfg    *Configuration
+	common service // Reuse a single struct instead of allocating one for each service on the heap.
 
-	 // API Services
-	K8sfilterApi	*K8sfilterApiService
+	// API Services
+	K8sfilterApi *K8sfilterApiService
 }
 
 type service struct {
@@ -70,7 +70,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 func atoi(in string) (int, error) {
 	return strconv.Atoi(in)
 }
-
 
 // selectHeaderContentType select a content type from the available list.
 func selectHeaderContentType(contentTypes []string) string {
@@ -144,16 +143,16 @@ func parameterToString(obj interface{}, collectionFormat string) string {
 
 // callAPI do the request.
 func (c *APIClient) callAPI(request *http.Request) (*http.Response, error) {
-	 return c.cfg.HTTPClient.Do(request)
+	return c.cfg.HTTPClient.Do(request)
 }
 
 // Change base path to allow switching to mocks
-func (c *APIClient) ChangeBasePath (path string) {
+func (c *APIClient) ChangeBasePath(path string) {
 	c.cfg.BasePath = path
 }
 
 // prepareRequest build the request
-func (c *APIClient) prepareRequest (
+func (c *APIClient) prepareRequest(
 	ctx context.Context,
 	path string, method string,
 	postBody interface{},
@@ -283,7 +282,7 @@ func (c *APIClient) prepareRequest (
 
 		// AccessToken Authentication
 		if auth, ok := ctx.Value(ContextAccessToken).(string); ok {
-			localVarRequest.Header.Add("Authorization", "Bearer " + auth)
+			localVarRequest.Header.Add("Authorization", "Bearer "+auth)
 		}
 	}
 
@@ -293,7 +292,6 @@ func (c *APIClient) prepareRequest (
 
 	return localVarRequest, nil
 }
-
 
 // Add a file to the multipart request
 func addFile(w *multipart.Writer, fieldName, path string) error {
@@ -313,7 +311,7 @@ func addFile(w *multipart.Writer, fieldName, path string) error {
 }
 
 // Prevent trying to import "fmt"
-func reportError(format string, a ...interface{}) (error) {
+func reportError(format string, a ...interface{}) error {
 	return fmt.Errorf(format, a...)
 }
 
@@ -367,7 +365,6 @@ func detectContentType(body interface{}) string {
 	return contentType
 }
 
-
 // Ripped from https://github.com/gregjones/httpcache/blob/master/httpcache.go
 type cacheControl map[string]string
 
@@ -390,7 +387,7 @@ func parseCacheControl(headers http.Header) cacheControl {
 }
 
 // CacheExpires helper function to determine remaining time before repeating a request.
-func CacheExpires(r *http.Response) (time.Time) {
+func CacheExpires(r *http.Response) time.Time {
 	// Figure out when the cache expires.
 	var expires time.Time
 	now, err := time.Parse(time.RFC1123, r.Header.Get("date"))
@@ -417,7 +414,6 @@ func CacheExpires(r *http.Response) (time.Time) {
 	return expires
 }
 
-func strlen(s string) (int) {
+func strlen(s string) int {
 	return utf8.RuneCountInString(s)
 }
-

@@ -10,12 +10,12 @@
 package swagger
 
 import (
-	"net/url"
-	"net/http"
-	"strings"
-	"golang.org/x/net/context"
 	"encoding/json"
 	"fmt"
+	"golang.org/x/net/context"
+	"net/http"
+	"net/url"
+	"strings"
 )
 
 // Linger please
@@ -25,19 +25,18 @@ var (
 
 type K8switchApiService service
 
-
 /* K8switchApiService Create k8switch by ID
- Create operation of resource: k8switch
+Create operation of resource: k8switch
 
- @param name ID of name
- @param k8switch k8switchbody object
- @return */
-func (a *K8switchApiService) CreateK8switchByID(name string, k8switch K8switch) ( *http.Response, error) {
+@param name ID of name
+@param k8switch k8switchbody object
+@return */
+func (a *K8switchApiService) CreateK8switchByID(name string, k8switch K8switch) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -48,9 +47,8 @@ func (a *K8switchApiService) CreateK8switchByID(name string, k8switch K8switch) 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -61,7 +59,7 @@ func (a *K8switchApiService) CreateK8switchByID(name string, k8switch K8switch) 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -88,18 +86,18 @@ func (a *K8switchApiService) CreateK8switchByID(name string, k8switch K8switch) 
 }
 
 /* K8switchApiService Create fwd-table by ID
- Create operation of resource: fwd-table
+Create operation of resource: fwd-table
 
- @param name ID of name
- @param address ID of address
- @param fwdTable fwd-tablebody object
- @return */
-func (a *K8switchApiService) CreateK8switchFwdTableByID(name string, address string, fwdTable FwdTable) ( *http.Response, error) {
+@param name ID of name
+@param address ID of address
+@param fwdTable fwd-tablebody object
+@return */
+func (a *K8switchApiService) CreateK8switchFwdTableByID(name string, address string, fwdTable FwdTable) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -111,9 +109,8 @@ func (a *K8switchApiService) CreateK8switchFwdTableByID(name string, address str
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -124,7 +121,7 @@ func (a *K8switchApiService) CreateK8switchFwdTableByID(name string, address str
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -151,17 +148,17 @@ func (a *K8switchApiService) CreateK8switchFwdTableByID(name string, address str
 }
 
 /* K8switchApiService Create fwd-table by ID
- Create operation of resource: fwd-table
+Create operation of resource: fwd-table
 
- @param name ID of name
- @param fwdTable fwd-tablebody object
- @return */
-func (a *K8switchApiService) CreateK8switchFwdTableListByID(name string, fwdTable []FwdTable) ( *http.Response, error) {
+@param name ID of name
+@param fwdTable fwd-tablebody object
+@return */
+func (a *K8switchApiService) CreateK8switchFwdTableListByID(name string, fwdTable []FwdTable) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -172,9 +169,8 @@ func (a *K8switchApiService) CreateK8switchFwdTableListByID(name string, fwdTabl
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -185,7 +181,7 @@ func (a *K8switchApiService) CreateK8switchFwdTableListByID(name string, fwdTabl
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -212,18 +208,18 @@ func (a *K8switchApiService) CreateK8switchFwdTableListByID(name string, fwdTabl
 }
 
 /* K8switchApiService Create ports by ID
- Create operation of resource: ports
+Create operation of resource: ports
 
- @param name ID of name
- @param portsName ID of ports_name
- @param ports portsbody object
- @return */
-func (a *K8switchApiService) CreateK8switchPortsByID(name string, portsName string, ports Ports) ( *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@param ports portsbody object
+@return */
+func (a *K8switchApiService) CreateK8switchPortsByID(name string, portsName string, ports Ports) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -235,9 +231,8 @@ func (a *K8switchApiService) CreateK8switchPortsByID(name string, portsName stri
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -248,7 +243,7 @@ func (a *K8switchApiService) CreateK8switchPortsByID(name string, portsName stri
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -275,17 +270,17 @@ func (a *K8switchApiService) CreateK8switchPortsByID(name string, portsName stri
 }
 
 /* K8switchApiService Create ports by ID
- Create operation of resource: ports
+Create operation of resource: ports
 
- @param name ID of name
- @param ports portsbody object
- @return */
-func (a *K8switchApiService) CreateK8switchPortsListByID(name string, ports []Ports) ( *http.Response, error) {
+@param name ID of name
+@param ports portsbody object
+@return */
+func (a *K8switchApiService) CreateK8switchPortsListByID(name string, ports []Ports) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -296,9 +291,8 @@ func (a *K8switchApiService) CreateK8switchPortsListByID(name string, ports []Po
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -309,7 +303,7 @@ func (a *K8switchApiService) CreateK8switchPortsListByID(name string, ports []Po
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -336,21 +330,21 @@ func (a *K8switchApiService) CreateK8switchPortsListByID(name string, ports []Po
 }
 
 /* K8switchApiService Create backend by ID
- Create operation of resource: backend
+Create operation of resource: backend
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param ip ID of ip
- @param backend backendbody object
- @return */
-func (a *K8switchApiService) CreateK8switchServiceBackendByID(name string, vip string, vport int32, proto string, ip string, port int32, backend ServiceBackend) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param ip ID of ip
+@param backend backendbody object
+@return */
+func (a *K8switchApiService) CreateK8switchServiceBackendByID(name string, vip string, vport int32, proto string, ip string, port int32, backend ServiceBackend) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -366,9 +360,8 @@ func (a *K8switchApiService) CreateK8switchServiceBackendByID(name string, vip s
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -379,7 +372,7 @@ func (a *K8switchApiService) CreateK8switchServiceBackendByID(name string, vip s
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -406,20 +399,20 @@ func (a *K8switchApiService) CreateK8switchServiceBackendByID(name string, vip s
 }
 
 /* K8switchApiService Create backend by ID
- Create operation of resource: backend
+Create operation of resource: backend
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param backend backendbody object
- @return */
-func (a *K8switchApiService) CreateK8switchServiceBackendListByID(name string, vip string, vport int32, proto string, backend []ServiceBackend) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param backend backendbody object
+@return */
+func (a *K8switchApiService) CreateK8switchServiceBackendListByID(name string, vip string, vport int32, proto string, backend []ServiceBackend) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -433,9 +426,8 @@ func (a *K8switchApiService) CreateK8switchServiceBackendListByID(name string, v
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -446,7 +438,7 @@ func (a *K8switchApiService) CreateK8switchServiceBackendListByID(name string, v
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -473,20 +465,20 @@ func (a *K8switchApiService) CreateK8switchServiceBackendListByID(name string, v
 }
 
 /* K8switchApiService Create service by ID
- Create operation of resource: service
+Create operation of resource: service
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param service servicebody object
- @return */
-func (a *K8switchApiService) CreateK8switchServiceByID(name string, vip string, vport int32, proto string, service Service) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param service servicebody object
+@return */
+func (a *K8switchApiService) CreateK8switchServiceByID(name string, vip string, vport int32, proto string, service Service) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -500,9 +492,8 @@ func (a *K8switchApiService) CreateK8switchServiceByID(name string, vip string, 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -513,7 +504,7 @@ func (a *K8switchApiService) CreateK8switchServiceByID(name string, vip string, 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -540,17 +531,17 @@ func (a *K8switchApiService) CreateK8switchServiceByID(name string, vip string, 
 }
 
 /* K8switchApiService Create service by ID
- Create operation of resource: service
+Create operation of resource: service
 
- @param name ID of name
- @param service servicebody object
- @return */
-func (a *K8switchApiService) CreateK8switchServiceListByID(name string, service []Service) ( *http.Response, error) {
+@param name ID of name
+@param service servicebody object
+@return */
+func (a *K8switchApiService) CreateK8switchServiceListByID(name string, service []Service) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -561,9 +552,8 @@ func (a *K8switchApiService) CreateK8switchServiceListByID(name string, service 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -574,7 +564,7 @@ func (a *K8switchApiService) CreateK8switchServiceListByID(name string, service 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -601,16 +591,16 @@ func (a *K8switchApiService) CreateK8switchServiceListByID(name string, service 
 }
 
 /* K8switchApiService Delete k8switch by ID
- Delete operation of resource: k8switch
+Delete operation of resource: k8switch
 
- @param name ID of name
- @return */
-func (a *K8switchApiService) DeleteK8switchByID(name string) ( *http.Response, error) {
+@param name ID of name
+@return */
+func (a *K8switchApiService) DeleteK8switchByID(name string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -621,9 +611,8 @@ func (a *K8switchApiService) DeleteK8switchByID(name string) ( *http.Response, e
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -634,7 +623,7 @@ func (a *K8switchApiService) DeleteK8switchByID(name string) ( *http.Response, e
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -659,17 +648,17 @@ func (a *K8switchApiService) DeleteK8switchByID(name string) ( *http.Response, e
 }
 
 /* K8switchApiService Delete fwd-table by ID
- Delete operation of resource: fwd-table
+Delete operation of resource: fwd-table
 
- @param name ID of name
- @param address ID of address
- @return */
-func (a *K8switchApiService) DeleteK8switchFwdTableByID(name string, address string) ( *http.Response, error) {
+@param name ID of name
+@param address ID of address
+@return */
+func (a *K8switchApiService) DeleteK8switchFwdTableByID(name string, address string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -681,9 +670,8 @@ func (a *K8switchApiService) DeleteK8switchFwdTableByID(name string, address str
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -694,7 +682,7 @@ func (a *K8switchApiService) DeleteK8switchFwdTableByID(name string, address str
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -719,16 +707,16 @@ func (a *K8switchApiService) DeleteK8switchFwdTableByID(name string, address str
 }
 
 /* K8switchApiService Delete fwd-table by ID
- Delete operation of resource: fwd-table
+Delete operation of resource: fwd-table
 
- @param name ID of name
- @return */
-func (a *K8switchApiService) DeleteK8switchFwdTableListByID(name string) ( *http.Response, error) {
+@param name ID of name
+@return */
+func (a *K8switchApiService) DeleteK8switchFwdTableListByID(name string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -739,9 +727,8 @@ func (a *K8switchApiService) DeleteK8switchFwdTableListByID(name string) ( *http
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -752,7 +739,7 @@ func (a *K8switchApiService) DeleteK8switchFwdTableListByID(name string) ( *http
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -777,17 +764,17 @@ func (a *K8switchApiService) DeleteK8switchFwdTableListByID(name string) ( *http
 }
 
 /* K8switchApiService Delete ports by ID
- Delete operation of resource: ports
+Delete operation of resource: ports
 
- @param name ID of name
- @param portsName ID of ports_name
- @return */
-func (a *K8switchApiService) DeleteK8switchPortsByID(name string, portsName string) ( *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@return */
+func (a *K8switchApiService) DeleteK8switchPortsByID(name string, portsName string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -799,9 +786,8 @@ func (a *K8switchApiService) DeleteK8switchPortsByID(name string, portsName stri
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -812,7 +798,7 @@ func (a *K8switchApiService) DeleteK8switchPortsByID(name string, portsName stri
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -837,16 +823,16 @@ func (a *K8switchApiService) DeleteK8switchPortsByID(name string, portsName stri
 }
 
 /* K8switchApiService Delete ports by ID
- Delete operation of resource: ports
+Delete operation of resource: ports
 
- @param name ID of name
- @return */
-func (a *K8switchApiService) DeleteK8switchPortsListByID(name string) ( *http.Response, error) {
+@param name ID of name
+@return */
+func (a *K8switchApiService) DeleteK8switchPortsListByID(name string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -857,9 +843,8 @@ func (a *K8switchApiService) DeleteK8switchPortsListByID(name string) ( *http.Re
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -870,7 +855,7 @@ func (a *K8switchApiService) DeleteK8switchPortsListByID(name string) ( *http.Re
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -895,20 +880,20 @@ func (a *K8switchApiService) DeleteK8switchPortsListByID(name string) ( *http.Re
 }
 
 /* K8switchApiService Delete backend by ID
- Delete operation of resource: backend
+Delete operation of resource: backend
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param ip ID of ip
- @return */
-func (a *K8switchApiService) DeleteK8switchServiceBackendByID(name string, vip string, vport int32, proto string, ip string, port int32) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param ip ID of ip
+@return */
+func (a *K8switchApiService) DeleteK8switchServiceBackendByID(name string, vip string, vport int32, proto string, ip string, port int32) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -924,9 +909,8 @@ func (a *K8switchApiService) DeleteK8switchServiceBackendByID(name string, vip s
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -937,7 +921,7 @@ func (a *K8switchApiService) DeleteK8switchServiceBackendByID(name string, vip s
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -962,19 +946,19 @@ func (a *K8switchApiService) DeleteK8switchServiceBackendByID(name string, vip s
 }
 
 /* K8switchApiService Delete backend by ID
- Delete operation of resource: backend
+Delete operation of resource: backend
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @return */
-func (a *K8switchApiService) DeleteK8switchServiceBackendListByID(name string, vip string, vport int32, proto string) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@return */
+func (a *K8switchApiService) DeleteK8switchServiceBackendListByID(name string, vip string, vport int32, proto string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -988,9 +972,8 @@ func (a *K8switchApiService) DeleteK8switchServiceBackendListByID(name string, v
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1001,7 +984,7 @@ func (a *K8switchApiService) DeleteK8switchServiceBackendListByID(name string, v
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1026,19 +1009,19 @@ func (a *K8switchApiService) DeleteK8switchServiceBackendListByID(name string, v
 }
 
 /* K8switchApiService Delete service by ID
- Delete operation of resource: service
+Delete operation of resource: service
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @return */
-func (a *K8switchApiService) DeleteK8switchServiceByID(name string, vip string, vport int32, proto string) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@return */
+func (a *K8switchApiService) DeleteK8switchServiceByID(name string, vip string, vport int32, proto string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -1052,9 +1035,8 @@ func (a *K8switchApiService) DeleteK8switchServiceByID(name string, vip string, 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1065,7 +1047,7 @@ func (a *K8switchApiService) DeleteK8switchServiceByID(name string, vip string, 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1090,16 +1072,16 @@ func (a *K8switchApiService) DeleteK8switchServiceByID(name string, vip string, 
 }
 
 /* K8switchApiService Delete service by ID
- Delete operation of resource: service
+Delete operation of resource: service
 
- @param name ID of name
- @return */
-func (a *K8switchApiService) DeleteK8switchServiceListByID(name string) ( *http.Response, error) {
+@param name ID of name
+@return */
+func (a *K8switchApiService) DeleteK8switchServiceListByID(name string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -1110,9 +1092,8 @@ func (a *K8switchApiService) DeleteK8switchServiceListByID(name string) ( *http.
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1123,7 +1104,7 @@ func (a *K8switchApiService) DeleteK8switchServiceListByID(name string) ( *http.
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1148,17 +1129,17 @@ func (a *K8switchApiService) DeleteK8switchServiceListByID(name string) ( *http.
 }
 
 /* K8switchApiService Read k8switch by ID
- Read operation of resource: k8switch
+Read operation of resource: k8switch
 
- @param name ID of name
- @return K8switch*/
-func (a *K8switchApiService) ReadK8switchByID(name string) (K8switch,  *http.Response, error) {
+@param name ID of name
+@return K8switch*/
+func (a *K8switchApiService) ReadK8switchByID(name string) (K8switch, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  K8switch
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     K8switch
 	)
 
 	// create path and map variables
@@ -1169,9 +1150,8 @@ func (a *K8switchApiService) ReadK8switchByID(name string) (K8switch,  *http.Res
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1182,7 +1162,7 @@ func (a *K8switchApiService) ReadK8switchByID(name string) (K8switch,  *http.Res
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1207,22 +1187,21 @@ func (a *K8switchApiService) ReadK8switchByID(name string) (K8switch,  *http.Res
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read client-subnet by ID
- Read operation of resource: client-subnet
+Read operation of resource: client-subnet
 
- @param name ID of name
- @return string*/
-func (a *K8switchApiService) ReadK8switchClientSubnetByID(name string) (string,  *http.Response, error) {
+@param name ID of name
+@return string*/
+func (a *K8switchApiService) ReadK8switchClientSubnetByID(name string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -1233,9 +1212,8 @@ func (a *K8switchApiService) ReadK8switchClientSubnetByID(name string) (string, 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1246,7 +1224,7 @@ func (a *K8switchApiService) ReadK8switchClientSubnetByID(name string) (string, 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1271,22 +1249,21 @@ func (a *K8switchApiService) ReadK8switchClientSubnetByID(name string) (string, 
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read cluster-ip-subnet by ID
- Read operation of resource: cluster-ip-subnet
+Read operation of resource: cluster-ip-subnet
 
- @param name ID of name
- @return string*/
-func (a *K8switchApiService) ReadK8switchClusterIpSubnetByID(name string) (string,  *http.Response, error) {
+@param name ID of name
+@return string*/
+func (a *K8switchApiService) ReadK8switchClusterIpSubnetByID(name string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -1297,9 +1274,8 @@ func (a *K8switchApiService) ReadK8switchClusterIpSubnetByID(name string) (strin
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1310,7 +1286,7 @@ func (a *K8switchApiService) ReadK8switchClusterIpSubnetByID(name string) (strin
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1335,23 +1311,22 @@ func (a *K8switchApiService) ReadK8switchClusterIpSubnetByID(name string) (strin
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read fwd-table by ID
- Read operation of resource: fwd-table
+Read operation of resource: fwd-table
 
- @param name ID of name
- @param address ID of address
- @return FwdTable*/
-func (a *K8switchApiService) ReadK8switchFwdTableByID(name string, address string) (FwdTable,  *http.Response, error) {
+@param name ID of name
+@param address ID of address
+@return FwdTable*/
+func (a *K8switchApiService) ReadK8switchFwdTableByID(name string, address string) (FwdTable, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  FwdTable
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     FwdTable
 	)
 
 	// create path and map variables
@@ -1363,9 +1338,8 @@ func (a *K8switchApiService) ReadK8switchFwdTableByID(name string, address strin
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1376,7 +1350,7 @@ func (a *K8switchApiService) ReadK8switchFwdTableByID(name string, address strin
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1401,22 +1375,21 @@ func (a *K8switchApiService) ReadK8switchFwdTableByID(name string, address strin
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read fwd-table by ID
- Read operation of resource: fwd-table
+Read operation of resource: fwd-table
 
- @param name ID of name
- @return []FwdTable*/
-func (a *K8switchApiService) ReadK8switchFwdTableListByID(name string) ([]FwdTable,  *http.Response, error) {
+@param name ID of name
+@return []FwdTable*/
+func (a *K8switchApiService) ReadK8switchFwdTableListByID(name string) ([]FwdTable, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  []FwdTable
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     []FwdTable
 	)
 
 	// create path and map variables
@@ -1427,9 +1400,8 @@ func (a *K8switchApiService) ReadK8switchFwdTableListByID(name string) ([]FwdTab
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1440,7 +1412,7 @@ func (a *K8switchApiService) ReadK8switchFwdTableListByID(name string) ([]FwdTab
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1465,23 +1437,22 @@ func (a *K8switchApiService) ReadK8switchFwdTableListByID(name string) ([]FwdTab
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read mac by ID
- Read operation of resource: mac
+Read operation of resource: mac
 
- @param name ID of name
- @param address ID of address
- @return string*/
-func (a *K8switchApiService) ReadK8switchFwdTableMacByID(name string, address string) (string,  *http.Response, error) {
+@param name ID of name
+@param address ID of address
+@return string*/
+func (a *K8switchApiService) ReadK8switchFwdTableMacByID(name string, address string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -1493,9 +1464,8 @@ func (a *K8switchApiService) ReadK8switchFwdTableMacByID(name string, address st
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1506,7 +1476,7 @@ func (a *K8switchApiService) ReadK8switchFwdTableMacByID(name string, address st
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1531,23 +1501,22 @@ func (a *K8switchApiService) ReadK8switchFwdTableMacByID(name string, address st
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read port by ID
- Read operation of resource: port
+Read operation of resource: port
 
- @param name ID of name
- @param address ID of address
- @return string*/
-func (a *K8switchApiService) ReadK8switchFwdTablePortByID(name string, address string) (string,  *http.Response, error) {
+@param name ID of name
+@param address ID of address
+@return string*/
+func (a *K8switchApiService) ReadK8switchFwdTablePortByID(name string, address string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -1559,9 +1528,8 @@ func (a *K8switchApiService) ReadK8switchFwdTablePortByID(name string, address s
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1572,7 +1540,7 @@ func (a *K8switchApiService) ReadK8switchFwdTablePortByID(name string, address s
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1597,21 +1565,20 @@ func (a *K8switchApiService) ReadK8switchFwdTablePortByID(name string, address s
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read k8switch by ID
- Read operation of resource: k8switch
+Read operation of resource: k8switch
 
- @return []K8switch*/
-func (a *K8switchApiService) ReadK8switchListByID() ([]K8switch,  *http.Response, error) {
+@return []K8switch*/
+func (a *K8switchApiService) ReadK8switchListByID() ([]K8switch, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  []K8switch
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     []K8switch
 	)
 
 	// create path and map variables
@@ -1621,9 +1588,8 @@ func (a *K8switchApiService) ReadK8switchListByID() ([]K8switch,  *http.Response
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1634,7 +1600,7 @@ func (a *K8switchApiService) ReadK8switchListByID() ([]K8switch,  *http.Response
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1659,22 +1625,21 @@ func (a *K8switchApiService) ReadK8switchListByID() ([]K8switch,  *http.Response
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read loglevel by ID
- Read operation of resource: loglevel
+Read operation of resource: loglevel
 
- @param name ID of name
- @return string*/
-func (a *K8switchApiService) ReadK8switchLoglevelByID(name string) (string,  *http.Response, error) {
+@param name ID of name
+@return string*/
+func (a *K8switchApiService) ReadK8switchLoglevelByID(name string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -1685,9 +1650,8 @@ func (a *K8switchApiService) ReadK8switchLoglevelByID(name string) (string,  *ht
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1698,7 +1662,7 @@ func (a *K8switchApiService) ReadK8switchLoglevelByID(name string) (string,  *ht
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1723,23 +1687,22 @@ func (a *K8switchApiService) ReadK8switchLoglevelByID(name string) (string,  *ht
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read ports by ID
- Read operation of resource: ports
+Read operation of resource: ports
 
- @param name ID of name
- @param portsName ID of ports_name
- @return Ports*/
-func (a *K8switchApiService) ReadK8switchPortsByID(name string, portsName string) (Ports,  *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@return Ports*/
+func (a *K8switchApiService) ReadK8switchPortsByID(name string, portsName string) (Ports, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  Ports
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     Ports
 	)
 
 	// create path and map variables
@@ -1751,9 +1714,8 @@ func (a *K8switchApiService) ReadK8switchPortsByID(name string, portsName string
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1764,7 +1726,7 @@ func (a *K8switchApiService) ReadK8switchPortsByID(name string, portsName string
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1789,22 +1751,21 @@ func (a *K8switchApiService) ReadK8switchPortsByID(name string, portsName string
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read ports by ID
- Read operation of resource: ports
+Read operation of resource: ports
 
- @param name ID of name
- @return []Ports*/
-func (a *K8switchApiService) ReadK8switchPortsListByID(name string) ([]Ports,  *http.Response, error) {
+@param name ID of name
+@return []Ports*/
+func (a *K8switchApiService) ReadK8switchPortsListByID(name string) ([]Ports, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  []Ports
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     []Ports
 	)
 
 	// create path and map variables
@@ -1815,9 +1776,8 @@ func (a *K8switchApiService) ReadK8switchPortsListByID(name string) ([]Ports,  *
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1828,7 +1788,7 @@ func (a *K8switchApiService) ReadK8switchPortsListByID(name string) ([]Ports,  *
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1853,23 +1813,22 @@ func (a *K8switchApiService) ReadK8switchPortsListByID(name string) ([]Ports,  *
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read peer by ID
- Read operation of resource: peer
+Read operation of resource: peer
 
- @param name ID of name
- @param portsName ID of ports_name
- @return string*/
-func (a *K8switchApiService) ReadK8switchPortsPeerByID(name string, portsName string) (string,  *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@return string*/
+func (a *K8switchApiService) ReadK8switchPortsPeerByID(name string, portsName string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -1881,9 +1840,8 @@ func (a *K8switchApiService) ReadK8switchPortsPeerByID(name string, portsName st
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1894,7 +1852,7 @@ func (a *K8switchApiService) ReadK8switchPortsPeerByID(name string, portsName st
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1919,23 +1877,22 @@ func (a *K8switchApiService) ReadK8switchPortsPeerByID(name string, portsName st
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read status by ID
- Read operation of resource: status
+Read operation of resource: status
 
- @param name ID of name
- @param portsName ID of ports_name
- @return string*/
-func (a *K8switchApiService) ReadK8switchPortsStatusByID(name string, portsName string) (string,  *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@return string*/
+func (a *K8switchApiService) ReadK8switchPortsStatusByID(name string, portsName string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -1947,9 +1904,8 @@ func (a *K8switchApiService) ReadK8switchPortsStatusByID(name string, portsName 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1960,7 +1916,7 @@ func (a *K8switchApiService) ReadK8switchPortsStatusByID(name string, portsName 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1985,23 +1941,22 @@ func (a *K8switchApiService) ReadK8switchPortsStatusByID(name string, portsName 
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read type by ID
- Read operation of resource: type
+Read operation of resource: type
 
- @param name ID of name
- @param portsName ID of ports_name
- @return string*/
-func (a *K8switchApiService) ReadK8switchPortsTypeByID(name string, portsName string) (string,  *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@return string*/
+func (a *K8switchApiService) ReadK8switchPortsTypeByID(name string, portsName string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -2013,9 +1968,8 @@ func (a *K8switchApiService) ReadK8switchPortsTypeByID(name string, portsName st
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2026,7 +1980,7 @@ func (a *K8switchApiService) ReadK8switchPortsTypeByID(name string, portsName st
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2051,23 +2005,22 @@ func (a *K8switchApiService) ReadK8switchPortsTypeByID(name string, portsName st
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read uuid by ID
- Read operation of resource: uuid
+Read operation of resource: uuid
 
- @param name ID of name
- @param portsName ID of ports_name
- @return string*/
-func (a *K8switchApiService) ReadK8switchPortsUuidByID(name string, portsName string) (string,  *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@return string*/
+func (a *K8switchApiService) ReadK8switchPortsUuidByID(name string, portsName string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -2079,9 +2032,8 @@ func (a *K8switchApiService) ReadK8switchPortsUuidByID(name string, portsName st
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2092,7 +2044,7 @@ func (a *K8switchApiService) ReadK8switchPortsUuidByID(name string, portsName st
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2117,26 +2069,25 @@ func (a *K8switchApiService) ReadK8switchPortsUuidByID(name string, portsName st
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read backend by ID
- Read operation of resource: backend
+Read operation of resource: backend
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param ip ID of ip
- @return ServiceBackend*/
-func (a *K8switchApiService) ReadK8switchServiceBackendByID(name string, vip string, vport int32, proto string, ip string, port int32) (ServiceBackend,  *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param ip ID of ip
+@return ServiceBackend*/
+func (a *K8switchApiService) ReadK8switchServiceBackendByID(name string, vip string, vport int32, proto string, ip string, port int32) (ServiceBackend, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  ServiceBackend
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     ServiceBackend
 	)
 
 	// create path and map variables
@@ -2152,9 +2103,8 @@ func (a *K8switchApiService) ReadK8switchServiceBackendByID(name string, vip str
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2165,7 +2115,7 @@ func (a *K8switchApiService) ReadK8switchServiceBackendByID(name string, vip str
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2190,25 +2140,24 @@ func (a *K8switchApiService) ReadK8switchServiceBackendByID(name string, vip str
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read backend by ID
- Read operation of resource: backend
+Read operation of resource: backend
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @return []ServiceBackend*/
-func (a *K8switchApiService) ReadK8switchServiceBackendListByID(name string, vip string, vport int32, proto string) ([]ServiceBackend,  *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@return []ServiceBackend*/
+func (a *K8switchApiService) ReadK8switchServiceBackendListByID(name string, vip string, vport int32, proto string) ([]ServiceBackend, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  []ServiceBackend
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     []ServiceBackend
 	)
 
 	// create path and map variables
@@ -2222,9 +2171,8 @@ func (a *K8switchApiService) ReadK8switchServiceBackendListByID(name string, vip
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2235,7 +2183,7 @@ func (a *K8switchApiService) ReadK8switchServiceBackendListByID(name string, vip
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2260,26 +2208,25 @@ func (a *K8switchApiService) ReadK8switchServiceBackendListByID(name string, vip
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read name by ID
- Read operation of resource: name
+Read operation of resource: name
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param ip ID of ip
- @return string*/
-func (a *K8switchApiService) ReadK8switchServiceBackendNameByID(name string, vip string, vport int32, proto string, ip string, port int32) (string,  *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param ip ID of ip
+@return string*/
+func (a *K8switchApiService) ReadK8switchServiceBackendNameByID(name string, vip string, vport int32, proto string, ip string, port int32) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -2295,9 +2242,8 @@ func (a *K8switchApiService) ReadK8switchServiceBackendNameByID(name string, vip
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2308,7 +2254,7 @@ func (a *K8switchApiService) ReadK8switchServiceBackendNameByID(name string, vip
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2333,26 +2279,25 @@ func (a *K8switchApiService) ReadK8switchServiceBackendNameByID(name string, vip
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read port by ID
- Read operation of resource: port
+Read operation of resource: port
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param ip ID of ip
- @return int32*/
-func (a *K8switchApiService) ReadK8switchServiceBackendPortByID(name string, vip string, vport int32, proto string, ip string) (int32,  *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param ip ID of ip
+@return int32*/
+func (a *K8switchApiService) ReadK8switchServiceBackendPortByID(name string, vip string, vport int32, proto string, ip string) (int32, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  int32
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     int32
 	)
 
 	// create path and map variables
@@ -2367,9 +2312,8 @@ func (a *K8switchApiService) ReadK8switchServiceBackendPortByID(name string, vip
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2380,7 +2324,7 @@ func (a *K8switchApiService) ReadK8switchServiceBackendPortByID(name string, vip
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2405,26 +2349,25 @@ func (a *K8switchApiService) ReadK8switchServiceBackendPortByID(name string, vip
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read weight by ID
- Read operation of resource: weight
+Read operation of resource: weight
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param ip ID of ip
- @return int32*/
-func (a *K8switchApiService) ReadK8switchServiceBackendWeightByID(name string, vip string, vport int32, proto string, ip string, port int32) (int32,  *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param ip ID of ip
+@return int32*/
+func (a *K8switchApiService) ReadK8switchServiceBackendWeightByID(name string, vip string, vport int32, proto string, ip string, port int32) (int32, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  int32
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     int32
 	)
 
 	// create path and map variables
@@ -2440,9 +2383,8 @@ func (a *K8switchApiService) ReadK8switchServiceBackendWeightByID(name string, v
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2453,7 +2395,7 @@ func (a *K8switchApiService) ReadK8switchServiceBackendWeightByID(name string, v
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2478,25 +2420,24 @@ func (a *K8switchApiService) ReadK8switchServiceBackendWeightByID(name string, v
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read service by ID
- Read operation of resource: service
+Read operation of resource: service
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @return Service*/
-func (a *K8switchApiService) ReadK8switchServiceByID(name string, vip string, vport int32, proto string) (Service,  *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@return Service*/
+func (a *K8switchApiService) ReadK8switchServiceByID(name string, vip string, vport int32, proto string) (Service, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  Service
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     Service
 	)
 
 	// create path and map variables
@@ -2510,9 +2451,8 @@ func (a *K8switchApiService) ReadK8switchServiceByID(name string, vip string, vp
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2523,7 +2463,7 @@ func (a *K8switchApiService) ReadK8switchServiceByID(name string, vip string, vp
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2548,22 +2488,21 @@ func (a *K8switchApiService) ReadK8switchServiceByID(name string, vip string, vp
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read service by ID
- Read operation of resource: service
+Read operation of resource: service
 
- @param name ID of name
- @return []Service*/
-func (a *K8switchApiService) ReadK8switchServiceListByID(name string) ([]Service,  *http.Response, error) {
+@param name ID of name
+@return []Service*/
+func (a *K8switchApiService) ReadK8switchServiceListByID(name string) ([]Service, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  []Service
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     []Service
 	)
 
 	// create path and map variables
@@ -2574,9 +2513,8 @@ func (a *K8switchApiService) ReadK8switchServiceListByID(name string) ([]Service
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2587,7 +2525,7 @@ func (a *K8switchApiService) ReadK8switchServiceListByID(name string) ([]Service
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2612,25 +2550,24 @@ func (a *K8switchApiService) ReadK8switchServiceListByID(name string) ([]Service
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read name by ID
- Read operation of resource: name
+Read operation of resource: name
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @return string*/
-func (a *K8switchApiService) ReadK8switchServiceNameByID(name string, vip string, vport int32, proto string) (string,  *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@return string*/
+func (a *K8switchApiService) ReadK8switchServiceNameByID(name string, vip string, vport int32, proto string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -2644,9 +2581,8 @@ func (a *K8switchApiService) ReadK8switchServiceNameByID(name string, vip string
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2657,7 +2593,7 @@ func (a *K8switchApiService) ReadK8switchServiceNameByID(name string, vip string
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2682,22 +2618,21 @@ func (a *K8switchApiService) ReadK8switchServiceNameByID(name string, vip string
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read type by ID
- Read operation of resource: type
+Read operation of resource: type
 
- @param name ID of name
- @return string*/
-func (a *K8switchApiService) ReadK8switchTypeByID(name string) (string,  *http.Response, error) {
+@param name ID of name
+@return string*/
+func (a *K8switchApiService) ReadK8switchTypeByID(name string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -2708,9 +2643,8 @@ func (a *K8switchApiService) ReadK8switchTypeByID(name string) (string,  *http.R
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2721,7 +2655,7 @@ func (a *K8switchApiService) ReadK8switchTypeByID(name string) (string,  *http.R
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2746,22 +2680,21 @@ func (a *K8switchApiService) ReadK8switchTypeByID(name string) (string,  *http.R
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read uuid by ID
- Read operation of resource: uuid
+Read operation of resource: uuid
 
- @param name ID of name
- @return string*/
-func (a *K8switchApiService) ReadK8switchUuidByID(name string) (string,  *http.Response, error) {
+@param name ID of name
+@return string*/
+func (a *K8switchApiService) ReadK8switchUuidByID(name string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -2772,9 +2705,8 @@ func (a *K8switchApiService) ReadK8switchUuidByID(name string) (string,  *http.R
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2785,7 +2717,7 @@ func (a *K8switchApiService) ReadK8switchUuidByID(name string) (string,  *http.R
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2810,22 +2742,21 @@ func (a *K8switchApiService) ReadK8switchUuidByID(name string) (string,  *http.R
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Read virtual-client-subnet by ID
- Read operation of resource: virtual-client-subnet
+Read operation of resource: virtual-client-subnet
 
- @param name ID of name
- @return string*/
-func (a *K8switchApiService) ReadK8switchVirtualClientSubnetByID(name string) (string,  *http.Response, error) {
+@param name ID of name
+@return string*/
+func (a *K8switchApiService) ReadK8switchVirtualClientSubnetByID(name string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -2836,9 +2767,8 @@ func (a *K8switchApiService) ReadK8switchVirtualClientSubnetByID(name string) (s
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2849,7 +2779,7 @@ func (a *K8switchApiService) ReadK8switchVirtualClientSubnetByID(name string) (s
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2874,22 +2804,21 @@ func (a *K8switchApiService) ReadK8switchVirtualClientSubnetByID(name string) (s
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8switchApiService Replace k8switch by ID
- Replace operation of resource: k8switch
+Replace operation of resource: k8switch
 
- @param name ID of name
- @param k8switch k8switchbody object
- @return */
-func (a *K8switchApiService) ReplaceK8switchByID(name string, k8switch K8switch) ( *http.Response, error) {
+@param name ID of name
+@param k8switch k8switchbody object
+@return */
+func (a *K8switchApiService) ReplaceK8switchByID(name string, k8switch K8switch) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -2900,9 +2829,8 @@ func (a *K8switchApiService) ReplaceK8switchByID(name string, k8switch K8switch)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2913,7 +2841,7 @@ func (a *K8switchApiService) ReplaceK8switchByID(name string, k8switch K8switch)
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -2940,18 +2868,18 @@ func (a *K8switchApiService) ReplaceK8switchByID(name string, k8switch K8switch)
 }
 
 /* K8switchApiService Replace fwd-table by ID
- Replace operation of resource: fwd-table
+Replace operation of resource: fwd-table
 
- @param name ID of name
- @param address ID of address
- @param fwdTable fwd-tablebody object
- @return */
-func (a *K8switchApiService) ReplaceK8switchFwdTableByID(name string, address string, fwdTable FwdTable) ( *http.Response, error) {
+@param name ID of name
+@param address ID of address
+@param fwdTable fwd-tablebody object
+@return */
+func (a *K8switchApiService) ReplaceK8switchFwdTableByID(name string, address string, fwdTable FwdTable) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -2963,9 +2891,8 @@ func (a *K8switchApiService) ReplaceK8switchFwdTableByID(name string, address st
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -2976,7 +2903,7 @@ func (a *K8switchApiService) ReplaceK8switchFwdTableByID(name string, address st
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3003,17 +2930,17 @@ func (a *K8switchApiService) ReplaceK8switchFwdTableByID(name string, address st
 }
 
 /* K8switchApiService Replace fwd-table by ID
- Replace operation of resource: fwd-table
+Replace operation of resource: fwd-table
 
- @param name ID of name
- @param fwdTable fwd-tablebody object
- @return */
-func (a *K8switchApiService) ReplaceK8switchFwdTableListByID(name string, fwdTable []FwdTable) ( *http.Response, error) {
+@param name ID of name
+@param fwdTable fwd-tablebody object
+@return */
+func (a *K8switchApiService) ReplaceK8switchFwdTableListByID(name string, fwdTable []FwdTable) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3024,9 +2951,8 @@ func (a *K8switchApiService) ReplaceK8switchFwdTableListByID(name string, fwdTab
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3037,7 +2963,7 @@ func (a *K8switchApiService) ReplaceK8switchFwdTableListByID(name string, fwdTab
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3064,18 +2990,18 @@ func (a *K8switchApiService) ReplaceK8switchFwdTableListByID(name string, fwdTab
 }
 
 /* K8switchApiService Replace ports by ID
- Replace operation of resource: ports
+Replace operation of resource: ports
 
- @param name ID of name
- @param portsName ID of ports_name
- @param ports portsbody object
- @return */
-func (a *K8switchApiService) ReplaceK8switchPortsByID(name string, portsName string, ports Ports) ( *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@param ports portsbody object
+@return */
+func (a *K8switchApiService) ReplaceK8switchPortsByID(name string, portsName string, ports Ports) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3087,9 +3013,8 @@ func (a *K8switchApiService) ReplaceK8switchPortsByID(name string, portsName str
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3100,7 +3025,7 @@ func (a *K8switchApiService) ReplaceK8switchPortsByID(name string, portsName str
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3127,17 +3052,17 @@ func (a *K8switchApiService) ReplaceK8switchPortsByID(name string, portsName str
 }
 
 /* K8switchApiService Replace ports by ID
- Replace operation of resource: ports
+Replace operation of resource: ports
 
- @param name ID of name
- @param ports portsbody object
- @return */
-func (a *K8switchApiService) ReplaceK8switchPortsListByID(name string, ports []Ports) ( *http.Response, error) {
+@param name ID of name
+@param ports portsbody object
+@return */
+func (a *K8switchApiService) ReplaceK8switchPortsListByID(name string, ports []Ports) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3148,9 +3073,8 @@ func (a *K8switchApiService) ReplaceK8switchPortsListByID(name string, ports []P
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3161,7 +3085,7 @@ func (a *K8switchApiService) ReplaceK8switchPortsListByID(name string, ports []P
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3188,21 +3112,21 @@ func (a *K8switchApiService) ReplaceK8switchPortsListByID(name string, ports []P
 }
 
 /* K8switchApiService Replace backend by ID
- Replace operation of resource: backend
+Replace operation of resource: backend
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param ip ID of ip
- @param backend backendbody object
- @return */
-func (a *K8switchApiService) ReplaceK8switchServiceBackendByID(name string, vip string, vport int32, proto string, ip string, port int32, backend ServiceBackend) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param ip ID of ip
+@param backend backendbody object
+@return */
+func (a *K8switchApiService) ReplaceK8switchServiceBackendByID(name string, vip string, vport int32, proto string, ip string, port int32, backend ServiceBackend) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3218,9 +3142,8 @@ func (a *K8switchApiService) ReplaceK8switchServiceBackendByID(name string, vip 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3231,7 +3154,7 @@ func (a *K8switchApiService) ReplaceK8switchServiceBackendByID(name string, vip 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3258,20 +3181,20 @@ func (a *K8switchApiService) ReplaceK8switchServiceBackendByID(name string, vip 
 }
 
 /* K8switchApiService Replace backend by ID
- Replace operation of resource: backend
+Replace operation of resource: backend
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param backend backendbody object
- @return */
-func (a *K8switchApiService) ReplaceK8switchServiceBackendListByID(name string, vip string, vport int32, proto string, backend []ServiceBackend) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param backend backendbody object
+@return */
+func (a *K8switchApiService) ReplaceK8switchServiceBackendListByID(name string, vip string, vport int32, proto string, backend []ServiceBackend) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3285,9 +3208,8 @@ func (a *K8switchApiService) ReplaceK8switchServiceBackendListByID(name string, 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3298,7 +3220,7 @@ func (a *K8switchApiService) ReplaceK8switchServiceBackendListByID(name string, 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3325,20 +3247,20 @@ func (a *K8switchApiService) ReplaceK8switchServiceBackendListByID(name string, 
 }
 
 /* K8switchApiService Replace service by ID
- Replace operation of resource: service
+Replace operation of resource: service
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param service servicebody object
- @return */
-func (a *K8switchApiService) ReplaceK8switchServiceByID(name string, vip string, vport int32, proto string, service Service) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param service servicebody object
+@return */
+func (a *K8switchApiService) ReplaceK8switchServiceByID(name string, vip string, vport int32, proto string, service Service) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3352,9 +3274,8 @@ func (a *K8switchApiService) ReplaceK8switchServiceByID(name string, vip string,
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3365,7 +3286,7 @@ func (a *K8switchApiService) ReplaceK8switchServiceByID(name string, vip string,
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3392,17 +3313,17 @@ func (a *K8switchApiService) ReplaceK8switchServiceByID(name string, vip string,
 }
 
 /* K8switchApiService Replace service by ID
- Replace operation of resource: service
+Replace operation of resource: service
 
- @param name ID of name
- @param service servicebody object
- @return */
-func (a *K8switchApiService) ReplaceK8switchServiceListByID(name string, service []Service) ( *http.Response, error) {
+@param name ID of name
+@param service servicebody object
+@return */
+func (a *K8switchApiService) ReplaceK8switchServiceListByID(name string, service []Service) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3413,9 +3334,8 @@ func (a *K8switchApiService) ReplaceK8switchServiceListByID(name string, service
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3426,7 +3346,7 @@ func (a *K8switchApiService) ReplaceK8switchServiceListByID(name string, service
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3453,17 +3373,17 @@ func (a *K8switchApiService) ReplaceK8switchServiceListByID(name string, service
 }
 
 /* K8switchApiService Update k8switch by ID
- Update operation of resource: k8switch
+Update operation of resource: k8switch
 
- @param name ID of name
- @param k8switch k8switchbody object
- @return */
-func (a *K8switchApiService) UpdateK8switchByID(name string, k8switch K8switch) ( *http.Response, error) {
+@param name ID of name
+@param k8switch k8switchbody object
+@return */
+func (a *K8switchApiService) UpdateK8switchByID(name string, k8switch K8switch) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3474,9 +3394,8 @@ func (a *K8switchApiService) UpdateK8switchByID(name string, k8switch K8switch) 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3487,7 +3406,7 @@ func (a *K8switchApiService) UpdateK8switchByID(name string, k8switch K8switch) 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3514,17 +3433,17 @@ func (a *K8switchApiService) UpdateK8switchByID(name string, k8switch K8switch) 
 }
 
 /* K8switchApiService Update client-subnet by ID
- Update operation of resource: client-subnet
+Update operation of resource: client-subnet
 
- @param name ID of name
- @param clientSubnet Range of IPs of pods in this node
- @return */
-func (a *K8switchApiService) UpdateK8switchClientSubnetByID(name string, clientSubnet string) ( *http.Response, error) {
+@param name ID of name
+@param clientSubnet Range of IPs of pods in this node
+@return */
+func (a *K8switchApiService) UpdateK8switchClientSubnetByID(name string, clientSubnet string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3535,9 +3454,8 @@ func (a *K8switchApiService) UpdateK8switchClientSubnetByID(name string, clientS
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3548,7 +3466,7 @@ func (a *K8switchApiService) UpdateK8switchClientSubnetByID(name string, clientS
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3575,17 +3493,17 @@ func (a *K8switchApiService) UpdateK8switchClientSubnetByID(name string, clientS
 }
 
 /* K8switchApiService Update cluster-ip-subnet by ID
- Update operation of resource: cluster-ip-subnet
+Update operation of resource: cluster-ip-subnet
 
- @param name ID of name
- @param clusterIpSubnet Range of VIPs where clusterIP services are exposed
- @return */
-func (a *K8switchApiService) UpdateK8switchClusterIpSubnetByID(name string, clusterIpSubnet string) ( *http.Response, error) {
+@param name ID of name
+@param clusterIpSubnet Range of VIPs where clusterIP services are exposed
+@return */
+func (a *K8switchApiService) UpdateK8switchClusterIpSubnetByID(name string, clusterIpSubnet string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3596,9 +3514,8 @@ func (a *K8switchApiService) UpdateK8switchClusterIpSubnetByID(name string, clus
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3609,7 +3526,7 @@ func (a *K8switchApiService) UpdateK8switchClusterIpSubnetByID(name string, clus
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3636,18 +3553,18 @@ func (a *K8switchApiService) UpdateK8switchClusterIpSubnetByID(name string, clus
 }
 
 /* K8switchApiService Update fwd-table by ID
- Update operation of resource: fwd-table
+Update operation of resource: fwd-table
 
- @param name ID of name
- @param address ID of address
- @param fwdTable fwd-tablebody object
- @return */
-func (a *K8switchApiService) UpdateK8switchFwdTableByID(name string, address string, fwdTable FwdTable) ( *http.Response, error) {
+@param name ID of name
+@param address ID of address
+@param fwdTable fwd-tablebody object
+@return */
+func (a *K8switchApiService) UpdateK8switchFwdTableByID(name string, address string, fwdTable FwdTable) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3659,9 +3576,8 @@ func (a *K8switchApiService) UpdateK8switchFwdTableByID(name string, address str
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3672,7 +3588,7 @@ func (a *K8switchApiService) UpdateK8switchFwdTableByID(name string, address str
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3699,17 +3615,17 @@ func (a *K8switchApiService) UpdateK8switchFwdTableByID(name string, address str
 }
 
 /* K8switchApiService Update fwd-table by ID
- Update operation of resource: fwd-table
+Update operation of resource: fwd-table
 
- @param name ID of name
- @param fwdTable fwd-tablebody object
- @return */
-func (a *K8switchApiService) UpdateK8switchFwdTableListByID(name string, fwdTable []FwdTable) ( *http.Response, error) {
+@param name ID of name
+@param fwdTable fwd-tablebody object
+@return */
+func (a *K8switchApiService) UpdateK8switchFwdTableListByID(name string, fwdTable []FwdTable) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3720,9 +3636,8 @@ func (a *K8switchApiService) UpdateK8switchFwdTableListByID(name string, fwdTabl
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3733,7 +3648,7 @@ func (a *K8switchApiService) UpdateK8switchFwdTableListByID(name string, fwdTabl
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3760,18 +3675,18 @@ func (a *K8switchApiService) UpdateK8switchFwdTableListByID(name string, fwdTabl
 }
 
 /* K8switchApiService Update mac by ID
- Update operation of resource: mac
+Update operation of resource: mac
 
- @param name ID of name
- @param address ID of address
- @param mac Destination MAC address
- @return */
-func (a *K8switchApiService) UpdateK8switchFwdTableMacByID(name string, address string, mac string) ( *http.Response, error) {
+@param name ID of name
+@param address ID of address
+@param mac Destination MAC address
+@return */
+func (a *K8switchApiService) UpdateK8switchFwdTableMacByID(name string, address string, mac string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3783,9 +3698,8 @@ func (a *K8switchApiService) UpdateK8switchFwdTableMacByID(name string, address 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3796,7 +3710,7 @@ func (a *K8switchApiService) UpdateK8switchFwdTableMacByID(name string, address 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3823,18 +3737,18 @@ func (a *K8switchApiService) UpdateK8switchFwdTableMacByID(name string, address 
 }
 
 /* K8switchApiService Update port by ID
- Update operation of resource: port
+Update operation of resource: port
 
- @param name ID of name
- @param address ID of address
- @param port Port where this entry is present
- @return */
-func (a *K8switchApiService) UpdateK8switchFwdTablePortByID(name string, address string, port string) ( *http.Response, error) {
+@param name ID of name
+@param address ID of address
+@param port Port where this entry is present
+@return */
+func (a *K8switchApiService) UpdateK8switchFwdTablePortByID(name string, address string, port string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3846,9 +3760,8 @@ func (a *K8switchApiService) UpdateK8switchFwdTablePortByID(name string, address
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3859,7 +3772,7 @@ func (a *K8switchApiService) UpdateK8switchFwdTablePortByID(name string, address
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3886,16 +3799,16 @@ func (a *K8switchApiService) UpdateK8switchFwdTablePortByID(name string, address
 }
 
 /* K8switchApiService Update k8switch by ID
- Update operation of resource: k8switch
+Update operation of resource: k8switch
 
- @param k8switch k8switchbody object
- @return */
-func (a *K8switchApiService) UpdateK8switchListByID(k8switch []K8switch) ( *http.Response, error) {
+@param k8switch k8switchbody object
+@return */
+func (a *K8switchApiService) UpdateK8switchListByID(k8switch []K8switch) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3905,9 +3818,8 @@ func (a *K8switchApiService) UpdateK8switchListByID(k8switch []K8switch) ( *http
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3918,7 +3830,7 @@ func (a *K8switchApiService) UpdateK8switchListByID(k8switch []K8switch) ( *http
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -3945,17 +3857,17 @@ func (a *K8switchApiService) UpdateK8switchListByID(k8switch []K8switch) ( *http
 }
 
 /* K8switchApiService Update loglevel by ID
- Update operation of resource: loglevel
+Update operation of resource: loglevel
 
- @param name ID of name
- @param loglevel Defines the logging level of a service instance, from none (OFF) to the most verbose (TRACE)
- @return */
-func (a *K8switchApiService) UpdateK8switchLoglevelByID(name string, loglevel string) ( *http.Response, error) {
+@param name ID of name
+@param loglevel Defines the logging level of a service instance, from none (OFF) to the most verbose (TRACE)
+@return */
+func (a *K8switchApiService) UpdateK8switchLoglevelByID(name string, loglevel string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -3966,9 +3878,8 @@ func (a *K8switchApiService) UpdateK8switchLoglevelByID(name string, loglevel st
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -3979,7 +3890,7 @@ func (a *K8switchApiService) UpdateK8switchLoglevelByID(name string, loglevel st
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4006,18 +3917,18 @@ func (a *K8switchApiService) UpdateK8switchLoglevelByID(name string, loglevel st
 }
 
 /* K8switchApiService Update ports by ID
- Update operation of resource: ports
+Update operation of resource: ports
 
- @param name ID of name
- @param portsName ID of ports_name
- @param ports portsbody object
- @return */
-func (a *K8switchApiService) UpdateK8switchPortsByID(name string, portsName string, ports Ports) ( *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@param ports portsbody object
+@return */
+func (a *K8switchApiService) UpdateK8switchPortsByID(name string, portsName string, ports Ports) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -4029,9 +3940,8 @@ func (a *K8switchApiService) UpdateK8switchPortsByID(name string, portsName stri
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -4042,7 +3952,7 @@ func (a *K8switchApiService) UpdateK8switchPortsByID(name string, portsName stri
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4069,17 +3979,17 @@ func (a *K8switchApiService) UpdateK8switchPortsByID(name string, portsName stri
 }
 
 /* K8switchApiService Update ports by ID
- Update operation of resource: ports
+Update operation of resource: ports
 
- @param name ID of name
- @param ports portsbody object
- @return */
-func (a *K8switchApiService) UpdateK8switchPortsListByID(name string, ports []Ports) ( *http.Response, error) {
+@param name ID of name
+@param ports portsbody object
+@return */
+func (a *K8switchApiService) UpdateK8switchPortsListByID(name string, ports []Ports) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -4090,9 +4000,8 @@ func (a *K8switchApiService) UpdateK8switchPortsListByID(name string, ports []Po
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -4103,7 +4012,7 @@ func (a *K8switchApiService) UpdateK8switchPortsListByID(name string, ports []Po
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4130,18 +4039,18 @@ func (a *K8switchApiService) UpdateK8switchPortsListByID(name string, ports []Po
 }
 
 /* K8switchApiService Update peer by ID
- Update operation of resource: peer
+Update operation of resource: peer
 
- @param name ID of name
- @param portsName ID of ports_name
- @param peer Peer name, such as a network interfaces (e.g., &#39;veth0&#39;) or another cube (e.g., &#39;br1:port2&#39;)
- @return */
-func (a *K8switchApiService) UpdateK8switchPortsPeerByID(name string, portsName string, peer string) ( *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@param peer Peer name, such as a network interfaces (e.g., &#39;veth0&#39;) or another cube (e.g., &#39;br1:port2&#39;)
+@return */
+func (a *K8switchApiService) UpdateK8switchPortsPeerByID(name string, portsName string, peer string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -4153,9 +4062,8 @@ func (a *K8switchApiService) UpdateK8switchPortsPeerByID(name string, portsName 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -4166,7 +4074,7 @@ func (a *K8switchApiService) UpdateK8switchPortsPeerByID(name string, portsName 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4193,18 +4101,18 @@ func (a *K8switchApiService) UpdateK8switchPortsPeerByID(name string, portsName 
 }
 
 /* K8switchApiService Update type by ID
- Update operation of resource: type
+Update operation of resource: type
 
- @param name ID of name
- @param portsName ID of ports_name
- @param type_ Type of the LB port (e.g. NODEPORT or DEFAULT)
- @return */
-func (a *K8switchApiService) UpdateK8switchPortsTypeByID(name string, portsName string, type_ string) ( *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@param type_ Type of the LB port (e.g. NODEPORT or DEFAULT)
+@return */
+func (a *K8switchApiService) UpdateK8switchPortsTypeByID(name string, portsName string, type_ string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -4216,9 +4124,8 @@ func (a *K8switchApiService) UpdateK8switchPortsTypeByID(name string, portsName 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -4229,7 +4136,7 @@ func (a *K8switchApiService) UpdateK8switchPortsTypeByID(name string, portsName 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4256,21 +4163,21 @@ func (a *K8switchApiService) UpdateK8switchPortsTypeByID(name string, portsName 
 }
 
 /* K8switchApiService Update backend by ID
- Update operation of resource: backend
+Update operation of resource: backend
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param ip ID of ip
- @param backend backendbody object
- @return */
-func (a *K8switchApiService) UpdateK8switchServiceBackendByID(name string, vip string, vport int32, proto string, ip string, port int32, backend ServiceBackend) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param ip ID of ip
+@param backend backendbody object
+@return */
+func (a *K8switchApiService) UpdateK8switchServiceBackendByID(name string, vip string, vport int32, proto string, ip string, port int32, backend ServiceBackend) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -4286,9 +4193,8 @@ func (a *K8switchApiService) UpdateK8switchServiceBackendByID(name string, vip s
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -4299,7 +4205,7 @@ func (a *K8switchApiService) UpdateK8switchServiceBackendByID(name string, vip s
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4326,20 +4232,20 @@ func (a *K8switchApiService) UpdateK8switchServiceBackendByID(name string, vip s
 }
 
 /* K8switchApiService Update backend by ID
- Update operation of resource: backend
+Update operation of resource: backend
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param backend backendbody object
- @return */
-func (a *K8switchApiService) UpdateK8switchServiceBackendListByID(name string, vip string, vport int32, proto string, backend []ServiceBackend) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param backend backendbody object
+@return */
+func (a *K8switchApiService) UpdateK8switchServiceBackendListByID(name string, vip string, vport int32, proto string, backend []ServiceBackend) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -4353,9 +4259,8 @@ func (a *K8switchApiService) UpdateK8switchServiceBackendListByID(name string, v
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -4366,7 +4271,7 @@ func (a *K8switchApiService) UpdateK8switchServiceBackendListByID(name string, v
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4393,21 +4298,21 @@ func (a *K8switchApiService) UpdateK8switchServiceBackendListByID(name string, v
 }
 
 /* K8switchApiService Update name by ID
- Update operation of resource: name
+Update operation of resource: name
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param ip ID of ip
- @param name2 name
- @return */
-func (a *K8switchApiService) UpdateK8switchServiceBackendNameByID(name string, vip string, vport int32, proto string, ip string, port int32, name2 string) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param ip ID of ip
+@param name2 name
+@return */
+func (a *K8switchApiService) UpdateK8switchServiceBackendNameByID(name string, vip string, vport int32, proto string, ip string, port int32, name2 string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -4423,9 +4328,8 @@ func (a *K8switchApiService) UpdateK8switchServiceBackendNameByID(name string, v
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -4436,7 +4340,7 @@ func (a *K8switchApiService) UpdateK8switchServiceBackendNameByID(name string, v
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4463,21 +4367,21 @@ func (a *K8switchApiService) UpdateK8switchServiceBackendNameByID(name string, v
 }
 
 /* K8switchApiService Update weight by ID
- Update operation of resource: weight
+Update operation of resource: weight
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param ip ID of ip
- @param weight Weight of the backend in the pool
- @return */
-func (a *K8switchApiService) UpdateK8switchServiceBackendWeightByID(name string, vip string, vport int32, proto string, ip string, port int32, weight int32) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param ip ID of ip
+@param weight Weight of the backend in the pool
+@return */
+func (a *K8switchApiService) UpdateK8switchServiceBackendWeightByID(name string, vip string, vport int32, proto string, ip string, port int32, weight int32) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -4493,9 +4397,8 @@ func (a *K8switchApiService) UpdateK8switchServiceBackendWeightByID(name string,
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -4506,7 +4409,7 @@ func (a *K8switchApiService) UpdateK8switchServiceBackendWeightByID(name string,
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4533,20 +4436,20 @@ func (a *K8switchApiService) UpdateK8switchServiceBackendWeightByID(name string,
 }
 
 /* K8switchApiService Update service by ID
- Update operation of resource: service
+Update operation of resource: service
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param service servicebody object
- @return */
-func (a *K8switchApiService) UpdateK8switchServiceByID(name string, vip string, vport int32, proto string, service Service) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param service servicebody object
+@return */
+func (a *K8switchApiService) UpdateK8switchServiceByID(name string, vip string, vport int32, proto string, service Service) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -4560,9 +4463,8 @@ func (a *K8switchApiService) UpdateK8switchServiceByID(name string, vip string, 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -4573,7 +4475,7 @@ func (a *K8switchApiService) UpdateK8switchServiceByID(name string, vip string, 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4600,17 +4502,17 @@ func (a *K8switchApiService) UpdateK8switchServiceByID(name string, vip string, 
 }
 
 /* K8switchApiService Update service by ID
- Update operation of resource: service
+Update operation of resource: service
 
- @param name ID of name
- @param service servicebody object
- @return */
-func (a *K8switchApiService) UpdateK8switchServiceListByID(name string, service []Service) ( *http.Response, error) {
+@param name ID of name
+@param service servicebody object
+@return */
+func (a *K8switchApiService) UpdateK8switchServiceListByID(name string, service []Service) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -4621,9 +4523,8 @@ func (a *K8switchApiService) UpdateK8switchServiceListByID(name string, service 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -4634,7 +4535,7 @@ func (a *K8switchApiService) UpdateK8switchServiceListByID(name string, service 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4661,20 +4562,20 @@ func (a *K8switchApiService) UpdateK8switchServiceListByID(name string, service 
 }
 
 /* K8switchApiService Update name by ID
- Update operation of resource: name
+Update operation of resource: name
 
- @param name ID of name
- @param vip ID of vip
- @param vport ID of vport
- @param proto ID of proto
- @param name2 Service name related to the backend server of the pool is connected to
- @return */
-func (a *K8switchApiService) UpdateK8switchServiceNameByID(name string, vip string, vport int32, proto string, name2 string) ( *http.Response, error) {
+@param name ID of name
+@param vip ID of vip
+@param vport ID of vport
+@param proto ID of proto
+@param name2 Service name related to the backend server of the pool is connected to
+@return */
+func (a *K8switchApiService) UpdateK8switchServiceNameByID(name string, vip string, vport int32, proto string, name2 string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -4688,9 +4589,8 @@ func (a *K8switchApiService) UpdateK8switchServiceNameByID(name string, vip stri
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -4701,7 +4601,7 @@ func (a *K8switchApiService) UpdateK8switchServiceNameByID(name string, vip stri
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4728,17 +4628,17 @@ func (a *K8switchApiService) UpdateK8switchServiceNameByID(name string, vip stri
 }
 
 /* K8switchApiService Update virtual-client-subnet by ID
- Update operation of resource: virtual-client-subnet
+Update operation of resource: virtual-client-subnet
 
- @param name ID of name
- @param virtualClientSubnet Range where client&#39;s IPs are mapped into
- @return */
-func (a *K8switchApiService) UpdateK8switchVirtualClientSubnetByID(name string, virtualClientSubnet string) ( *http.Response, error) {
+@param name ID of name
+@param virtualClientSubnet Range where client&#39;s IPs are mapped into
+@return */
+func (a *K8switchApiService) UpdateK8switchVirtualClientSubnetByID(name string, virtualClientSubnet string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -4749,9 +4649,8 @@ func (a *K8switchApiService) UpdateK8switchVirtualClientSubnetByID(name string, 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -4762,7 +4661,7 @@ func (a *K8switchApiService) UpdateK8switchVirtualClientSubnetByID(name string, 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -4787,4 +4686,3 @@ func (a *K8switchApiService) UpdateK8switchVirtualClientSubnetByID(name string, 
 
 	return localVarHttpResponse, err
 }
-

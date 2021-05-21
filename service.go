@@ -23,12 +23,12 @@ type servicePort struct {
 }
 
 type service struct {
-	UID   types.UID
-	Name  string
-	Type  string
-	VIP   string
+	UID                   types.UID
+	Name                  string
+	Type                  string
+	VIP                   string
 	ExternalTrafficPolicy string
-	Ports map[servicePortKey]servicePort // different ports exposed by the service
+	Ports                 map[servicePortKey]servicePort // different ports exposed by the service
 }
 
 var (

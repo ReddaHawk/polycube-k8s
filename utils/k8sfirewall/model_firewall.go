@@ -15,7 +15,7 @@ type Firewall struct {
 	// UUID of the Cube
 	Uuid string `json:"uuid,omitempty"`
 	// Type of the Cube (TC, XDP_SKB, XDP_DRV)
-	Type_ string `json:"type,omitempty"`
+	Type_       string `json:"type,omitempty"`
 	ServiceName string `json:"service-name,omitempty"`
 	// Defines the logging level of a service instance, from none (OFF) to the most verbose (TRACE)
 	Loglevel string `json:"loglevel,omitempty"`
@@ -24,7 +24,7 @@ type Firewall struct {
 	// If Connection Tracking is enabled, all packets belonging to ESTABLISHED connections will be forwarded automatically. Default is ON.
 	AcceptEstablished string `json:"accept-established,omitempty"`
 	// Interactive mode applies new rules immediately; if 'false', the command 'apply-rules' has to be used to apply all the rules at once. Default is TRUE.
-	Interactive bool `json:"interactive,omitempty"`
+	Interactive  bool           `json:"interactive,omitempty"`
 	SessionTable []SessionTable `json:"session-table,omitempty"`
-	Chain []Chain `json:"chain,omitempty"`
+	Chain        []Chain        `json:"chain,omitempty"`
 }

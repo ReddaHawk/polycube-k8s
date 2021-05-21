@@ -15,7 +15,7 @@ type K8sdispatcher struct {
 	// UUID of the Cube
 	Uuid string `json:"uuid,omitempty"`
 	// Type of the Cube (TC, XDP_SKB, XDP_DRV)
-	Type_ string `json:"type,omitempty"`
+	Type_       string `json:"type,omitempty"`
 	ServiceName string `json:"service-name,omitempty"`
 	// Defines the logging level of a service instance, from none (OFF) to the most verbose (TRACE)
 	Loglevel string `json:"loglevel,omitempty"`
@@ -30,9 +30,9 @@ type K8sdispatcher struct {
 	// Range of IPs of pods in this node
 	ClientSubnet string `json:"client-subnet,omitempty"`
 	// Internal src ip used for services with externaltrafficpolicy=cluster
-	InternalSrcIp string `json:"internal-src-ip,omitempty"`
-	NattingRule []NattingRule `json:"natting-rule,omitempty"`
-	NodeportRule []NodeportRule `json:"nodeport-rule,omitempty"`
+	InternalSrcIp string         `json:"internal-src-ip,omitempty"`
+	NattingRule   []NattingRule  `json:"natting-rule,omitempty"`
+	NodeportRule  []NodeportRule `json:"nodeport-rule,omitempty"`
 	// Port range used for NodePort services
 	NodeportRange string `json:"nodeport-range,omitempty"`
 }

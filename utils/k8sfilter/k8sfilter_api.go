@@ -10,12 +10,12 @@
 package swagger
 
 import (
-	"net/url"
-	"net/http"
-	"strings"
-	"golang.org/x/net/context"
 	"encoding/json"
 	"fmt"
+	"golang.org/x/net/context"
+	"net/http"
+	"net/url"
+	"strings"
 )
 
 // Linger please
@@ -25,19 +25,18 @@ var (
 
 type K8sfilterApiService service
 
-
 /* K8sfilterApiService Create k8sfilter by ID
- Create operation of resource: k8sfilter
+Create operation of resource: k8sfilter
 
- @param name ID of name
- @param k8sfilter k8sfilterbody object
- @return */
-func (a *K8sfilterApiService) CreateK8sfilterByID(name string, k8sfilter K8sfilter) ( *http.Response, error) {
+@param name ID of name
+@param k8sfilter k8sfilterbody object
+@return */
+func (a *K8sfilterApiService) CreateK8sfilterByID(name string, k8sfilter K8sfilter) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -48,9 +47,8 @@ func (a *K8sfilterApiService) CreateK8sfilterByID(name string, k8sfilter K8sfilt
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -61,7 +59,7 @@ func (a *K8sfilterApiService) CreateK8sfilterByID(name string, k8sfilter K8sfilt
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -88,18 +86,18 @@ func (a *K8sfilterApiService) CreateK8sfilterByID(name string, k8sfilter K8sfilt
 }
 
 /* K8sfilterApiService Create ports by ID
- Create operation of resource: ports
+Create operation of resource: ports
 
- @param name ID of name
- @param portsName ID of ports_name
- @param ports portsbody object
- @return */
-func (a *K8sfilterApiService) CreateK8sfilterPortsByID(name string, portsName string, ports Ports) ( *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@param ports portsbody object
+@return */
+func (a *K8sfilterApiService) CreateK8sfilterPortsByID(name string, portsName string, ports Ports) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -111,9 +109,8 @@ func (a *K8sfilterApiService) CreateK8sfilterPortsByID(name string, portsName st
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -124,7 +121,7 @@ func (a *K8sfilterApiService) CreateK8sfilterPortsByID(name string, portsName st
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -151,17 +148,17 @@ func (a *K8sfilterApiService) CreateK8sfilterPortsByID(name string, portsName st
 }
 
 /* K8sfilterApiService Create ports by ID
- Create operation of resource: ports
+Create operation of resource: ports
 
- @param name ID of name
- @param ports portsbody object
- @return */
-func (a *K8sfilterApiService) CreateK8sfilterPortsListByID(name string, ports []Ports) ( *http.Response, error) {
+@param name ID of name
+@param ports portsbody object
+@return */
+func (a *K8sfilterApiService) CreateK8sfilterPortsListByID(name string, ports []Ports) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -172,9 +169,8 @@ func (a *K8sfilterApiService) CreateK8sfilterPortsListByID(name string, ports []
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -185,7 +181,7 @@ func (a *K8sfilterApiService) CreateK8sfilterPortsListByID(name string, ports []
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -212,16 +208,16 @@ func (a *K8sfilterApiService) CreateK8sfilterPortsListByID(name string, ports []
 }
 
 /* K8sfilterApiService Delete k8sfilter by ID
- Delete operation of resource: k8sfilter
+Delete operation of resource: k8sfilter
 
- @param name ID of name
- @return */
-func (a *K8sfilterApiService) DeleteK8sfilterByID(name string) ( *http.Response, error) {
+@param name ID of name
+@return */
+func (a *K8sfilterApiService) DeleteK8sfilterByID(name string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -232,9 +228,8 @@ func (a *K8sfilterApiService) DeleteK8sfilterByID(name string) ( *http.Response,
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -245,7 +240,7 @@ func (a *K8sfilterApiService) DeleteK8sfilterByID(name string) ( *http.Response,
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -270,17 +265,17 @@ func (a *K8sfilterApiService) DeleteK8sfilterByID(name string) ( *http.Response,
 }
 
 /* K8sfilterApiService Delete ports by ID
- Delete operation of resource: ports
+Delete operation of resource: ports
 
- @param name ID of name
- @param portsName ID of ports_name
- @return */
-func (a *K8sfilterApiService) DeleteK8sfilterPortsByID(name string, portsName string) ( *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@return */
+func (a *K8sfilterApiService) DeleteK8sfilterPortsByID(name string, portsName string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -292,9 +287,8 @@ func (a *K8sfilterApiService) DeleteK8sfilterPortsByID(name string, portsName st
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -305,7 +299,7 @@ func (a *K8sfilterApiService) DeleteK8sfilterPortsByID(name string, portsName st
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -330,16 +324,16 @@ func (a *K8sfilterApiService) DeleteK8sfilterPortsByID(name string, portsName st
 }
 
 /* K8sfilterApiService Delete ports by ID
- Delete operation of resource: ports
+Delete operation of resource: ports
 
- @param name ID of name
- @return */
-func (a *K8sfilterApiService) DeleteK8sfilterPortsListByID(name string) ( *http.Response, error) {
+@param name ID of name
+@return */
+func (a *K8sfilterApiService) DeleteK8sfilterPortsListByID(name string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -350,9 +344,8 @@ func (a *K8sfilterApiService) DeleteK8sfilterPortsListByID(name string) ( *http.
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -363,7 +356,7 @@ func (a *K8sfilterApiService) DeleteK8sfilterPortsListByID(name string) ( *http.
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -388,17 +381,17 @@ func (a *K8sfilterApiService) DeleteK8sfilterPortsListByID(name string) ( *http.
 }
 
 /* K8sfilterApiService Read k8sfilter by ID
- Read operation of resource: k8sfilter
+Read operation of resource: k8sfilter
 
- @param name ID of name
- @return K8sfilter*/
-func (a *K8sfilterApiService) ReadK8sfilterByID(name string) (K8sfilter,  *http.Response, error) {
+@param name ID of name
+@return K8sfilter*/
+func (a *K8sfilterApiService) ReadK8sfilterByID(name string) (K8sfilter, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  K8sfilter
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     K8sfilter
 	)
 
 	// create path and map variables
@@ -409,9 +402,8 @@ func (a *K8sfilterApiService) ReadK8sfilterByID(name string) (K8sfilter,  *http.
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -422,7 +414,7 @@ func (a *K8sfilterApiService) ReadK8sfilterByID(name string) (K8sfilter,  *http.
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -447,21 +439,20 @@ func (a *K8sfilterApiService) ReadK8sfilterByID(name string) (K8sfilter,  *http.
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8sfilterApiService Read k8sfilter by ID
- Read operation of resource: k8sfilter
+Read operation of resource: k8sfilter
 
- @return []K8sfilter*/
-func (a *K8sfilterApiService) ReadK8sfilterListByID() ([]K8sfilter,  *http.Response, error) {
+@return []K8sfilter*/
+func (a *K8sfilterApiService) ReadK8sfilterListByID() ([]K8sfilter, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  []K8sfilter
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     []K8sfilter
 	)
 
 	// create path and map variables
@@ -471,9 +462,8 @@ func (a *K8sfilterApiService) ReadK8sfilterListByID() ([]K8sfilter,  *http.Respo
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -484,7 +474,7 @@ func (a *K8sfilterApiService) ReadK8sfilterListByID() ([]K8sfilter,  *http.Respo
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -509,22 +499,21 @@ func (a *K8sfilterApiService) ReadK8sfilterListByID() ([]K8sfilter,  *http.Respo
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8sfilterApiService Read loglevel by ID
- Read operation of resource: loglevel
+Read operation of resource: loglevel
 
- @param name ID of name
- @return string*/
-func (a *K8sfilterApiService) ReadK8sfilterLoglevelByID(name string) (string,  *http.Response, error) {
+@param name ID of name
+@return string*/
+func (a *K8sfilterApiService) ReadK8sfilterLoglevelByID(name string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -535,9 +524,8 @@ func (a *K8sfilterApiService) ReadK8sfilterLoglevelByID(name string) (string,  *
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -548,7 +536,7 @@ func (a *K8sfilterApiService) ReadK8sfilterLoglevelByID(name string) (string,  *
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -573,21 +561,20 @@ func (a *K8sfilterApiService) ReadK8sfilterLoglevelByID(name string) (string,  *
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8sfilterApiService Read nodeport-range by ID
- Read operation of resource: nodeport-range
- @param name ID of name
- @return string*/
- func (a *K8sfilterApiService) ReadK8sfilterNodeportRangeByID(name string) (string,  *http.Response, error) {
+Read operation of resource: nodeport-range
+@param name ID of name
+@return string*/
+func (a *K8sfilterApiService) ReadK8sfilterNodeportRangeByID(name string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -598,9 +585,8 @@ func (a *K8sfilterApiService) ReadK8sfilterLoglevelByID(name string) (string,  *
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -611,7 +597,7 @@ func (a *K8sfilterApiService) ReadK8sfilterLoglevelByID(name string) (string,  *
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -636,23 +622,22 @@ func (a *K8sfilterApiService) ReadK8sfilterLoglevelByID(name string) (string,  *
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8sfilterApiService Read ports by ID
- Read operation of resource: ports
+Read operation of resource: ports
 
- @param name ID of name
- @param portsName ID of ports_name
- @return Ports*/
-func (a *K8sfilterApiService) ReadK8sfilterPortsByID(name string, portsName string) (Ports,  *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@return Ports*/
+func (a *K8sfilterApiService) ReadK8sfilterPortsByID(name string, portsName string) (Ports, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  Ports
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     Ports
 	)
 
 	// create path and map variables
@@ -664,9 +649,8 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsByID(name string, portsName stri
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -677,7 +661,7 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsByID(name string, portsName stri
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -702,22 +686,21 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsByID(name string, portsName stri
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8sfilterApiService Read ports by ID
- Read operation of resource: ports
+Read operation of resource: ports
 
- @param name ID of name
- @return []Ports*/
-func (a *K8sfilterApiService) ReadK8sfilterPortsListByID(name string) ([]Ports,  *http.Response, error) {
+@param name ID of name
+@return []Ports*/
+func (a *K8sfilterApiService) ReadK8sfilterPortsListByID(name string) ([]Ports, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  []Ports
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     []Ports
 	)
 
 	// create path and map variables
@@ -728,9 +711,8 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsListByID(name string) ([]Ports, 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -741,7 +723,7 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsListByID(name string) ([]Ports, 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -766,23 +748,22 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsListByID(name string) ([]Ports, 
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8sfilterApiService Read peer by ID
- Read operation of resource: peer
+Read operation of resource: peer
 
- @param name ID of name
- @param portsName ID of ports_name
- @return string*/
-func (a *K8sfilterApiService) ReadK8sfilterPortsPeerByID(name string, portsName string) (string,  *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@return string*/
+func (a *K8sfilterApiService) ReadK8sfilterPortsPeerByID(name string, portsName string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -794,9 +775,8 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsPeerByID(name string, portsName 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -807,7 +787,7 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsPeerByID(name string, portsName 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -832,23 +812,22 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsPeerByID(name string, portsName 
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8sfilterApiService Read status by ID
- Read operation of resource: status
+Read operation of resource: status
 
- @param name ID of name
- @param portsName ID of ports_name
- @return string*/
-func (a *K8sfilterApiService) ReadK8sfilterPortsStatusByID(name string, portsName string) (string,  *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@return string*/
+func (a *K8sfilterApiService) ReadK8sfilterPortsStatusByID(name string, portsName string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -860,9 +839,8 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsStatusByID(name string, portsNam
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -873,7 +851,7 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsStatusByID(name string, portsNam
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -898,23 +876,22 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsStatusByID(name string, portsNam
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8sfilterApiService Read type by ID
- Read operation of resource: type
+Read operation of resource: type
 
- @param name ID of name
- @param portsName ID of ports_name
- @return string*/
-func (a *K8sfilterApiService) ReadK8sfilterPortsTypeByID(name string, portsName string) (string,  *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@return string*/
+func (a *K8sfilterApiService) ReadK8sfilterPortsTypeByID(name string, portsName string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -926,9 +903,8 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsTypeByID(name string, portsName 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -939,7 +915,7 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsTypeByID(name string, portsName 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -964,23 +940,22 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsTypeByID(name string, portsName 
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8sfilterApiService Read uuid by ID
- Read operation of resource: uuid
+Read operation of resource: uuid
 
- @param name ID of name
- @param portsName ID of ports_name
- @return string*/
-func (a *K8sfilterApiService) ReadK8sfilterPortsUuidByID(name string, portsName string) (string,  *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@return string*/
+func (a *K8sfilterApiService) ReadK8sfilterPortsUuidByID(name string, portsName string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -992,9 +967,8 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsUuidByID(name string, portsName 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1005,7 +979,7 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsUuidByID(name string, portsName 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1030,22 +1004,21 @@ func (a *K8sfilterApiService) ReadK8sfilterPortsUuidByID(name string, portsName 
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8sfilterApiService Read type by ID
- Read operation of resource: type
+Read operation of resource: type
 
- @param name ID of name
- @return string*/
-func (a *K8sfilterApiService) ReadK8sfilterTypeByID(name string) (string,  *http.Response, error) {
+@param name ID of name
+@return string*/
+func (a *K8sfilterApiService) ReadK8sfilterTypeByID(name string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -1056,9 +1029,8 @@ func (a *K8sfilterApiService) ReadK8sfilterTypeByID(name string) (string,  *http
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1069,7 +1041,7 @@ func (a *K8sfilterApiService) ReadK8sfilterTypeByID(name string) (string,  *http
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1094,22 +1066,21 @@ func (a *K8sfilterApiService) ReadK8sfilterTypeByID(name string) (string,  *http
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8sfilterApiService Read uuid by ID
- Read operation of resource: uuid
+Read operation of resource: uuid
 
- @param name ID of name
- @return string*/
-func (a *K8sfilterApiService) ReadK8sfilterUuidByID(name string) (string,  *http.Response, error) {
+@param name ID of name
+@return string*/
+func (a *K8sfilterApiService) ReadK8sfilterUuidByID(name string) (string, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
-	 	successPayload  string
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		successPayload     string
 	)
 
 	// create path and map variables
@@ -1120,9 +1091,8 @@ func (a *K8sfilterApiService) ReadK8sfilterUuidByID(name string) (string,  *http
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1133,7 +1103,7 @@ func (a *K8sfilterApiService) ReadK8sfilterUuidByID(name string) (string,  *http
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1158,22 +1128,21 @@ func (a *K8sfilterApiService) ReadK8sfilterUuidByID(name string) (string,  *http
 		return successPayload, localVarHttpResponse, err
 	}
 
-
 	return successPayload, localVarHttpResponse, err
 }
 
 /* K8sfilterApiService Replace k8sfilter by ID
- Replace operation of resource: k8sfilter
+Replace operation of resource: k8sfilter
 
- @param name ID of name
- @param k8sfilter k8sfilterbody object
- @return */
-func (a *K8sfilterApiService) ReplaceK8sfilterByID(name string, k8sfilter K8sfilter) ( *http.Response, error) {
+@param name ID of name
+@param k8sfilter k8sfilterbody object
+@return */
+func (a *K8sfilterApiService) ReplaceK8sfilterByID(name string, k8sfilter K8sfilter) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -1184,9 +1153,8 @@ func (a *K8sfilterApiService) ReplaceK8sfilterByID(name string, k8sfilter K8sfil
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1197,7 +1165,7 @@ func (a *K8sfilterApiService) ReplaceK8sfilterByID(name string, k8sfilter K8sfil
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1224,18 +1192,18 @@ func (a *K8sfilterApiService) ReplaceK8sfilterByID(name string, k8sfilter K8sfil
 }
 
 /* K8sfilterApiService Replace ports by ID
- Replace operation of resource: ports
+Replace operation of resource: ports
 
- @param name ID of name
- @param portsName ID of ports_name
- @param ports portsbody object
- @return */
-func (a *K8sfilterApiService) ReplaceK8sfilterPortsByID(name string, portsName string, ports Ports) ( *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@param ports portsbody object
+@return */
+func (a *K8sfilterApiService) ReplaceK8sfilterPortsByID(name string, portsName string, ports Ports) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -1247,9 +1215,8 @@ func (a *K8sfilterApiService) ReplaceK8sfilterPortsByID(name string, portsName s
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1260,7 +1227,7 @@ func (a *K8sfilterApiService) ReplaceK8sfilterPortsByID(name string, portsName s
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1287,17 +1254,17 @@ func (a *K8sfilterApiService) ReplaceK8sfilterPortsByID(name string, portsName s
 }
 
 /* K8sfilterApiService Replace ports by ID
- Replace operation of resource: ports
+Replace operation of resource: ports
 
- @param name ID of name
- @param ports portsbody object
- @return */
-func (a *K8sfilterApiService) ReplaceK8sfilterPortsListByID(name string, ports []Ports) ( *http.Response, error) {
+@param name ID of name
+@param ports portsbody object
+@return */
+func (a *K8sfilterApiService) ReplaceK8sfilterPortsListByID(name string, ports []Ports) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -1308,9 +1275,8 @@ func (a *K8sfilterApiService) ReplaceK8sfilterPortsListByID(name string, ports [
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1321,7 +1287,7 @@ func (a *K8sfilterApiService) ReplaceK8sfilterPortsListByID(name string, ports [
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1348,17 +1314,17 @@ func (a *K8sfilterApiService) ReplaceK8sfilterPortsListByID(name string, ports [
 }
 
 /* K8sfilterApiService Update k8sfilter by ID
- Update operation of resource: k8sfilter
+Update operation of resource: k8sfilter
 
- @param name ID of name
- @param k8sfilter k8sfilterbody object
- @return */
-func (a *K8sfilterApiService) UpdateK8sfilterByID(name string, k8sfilter K8sfilter) ( *http.Response, error) {
+@param name ID of name
+@param k8sfilter k8sfilterbody object
+@return */
+func (a *K8sfilterApiService) UpdateK8sfilterByID(name string, k8sfilter K8sfilter) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -1369,9 +1335,8 @@ func (a *K8sfilterApiService) UpdateK8sfilterByID(name string, k8sfilter K8sfilt
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1382,7 +1347,7 @@ func (a *K8sfilterApiService) UpdateK8sfilterByID(name string, k8sfilter K8sfilt
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1409,16 +1374,16 @@ func (a *K8sfilterApiService) UpdateK8sfilterByID(name string, k8sfilter K8sfilt
 }
 
 /* K8sfilterApiService Update k8sfilter by ID
- Update operation of resource: k8sfilter
+Update operation of resource: k8sfilter
 
- @param k8sfilter k8sfilterbody object
- @return */
-func (a *K8sfilterApiService) UpdateK8sfilterListByID(k8sfilter []K8sfilter) ( *http.Response, error) {
+@param k8sfilter k8sfilterbody object
+@return */
+func (a *K8sfilterApiService) UpdateK8sfilterListByID(k8sfilter []K8sfilter) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -1428,9 +1393,8 @@ func (a *K8sfilterApiService) UpdateK8sfilterListByID(k8sfilter []K8sfilter) ( *
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1441,7 +1405,7 @@ func (a *K8sfilterApiService) UpdateK8sfilterListByID(k8sfilter []K8sfilter) ( *
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1468,17 +1432,17 @@ func (a *K8sfilterApiService) UpdateK8sfilterListByID(k8sfilter []K8sfilter) ( *
 }
 
 /* K8sfilterApiService Update loglevel by ID
- Update operation of resource: loglevel
+Update operation of resource: loglevel
 
- @param name ID of name
- @param loglevel Defines the logging level of a service instance, from none (OFF) to the most verbose (TRACE)
- @return */
-func (a *K8sfilterApiService) UpdateK8sfilterLoglevelByID(name string, loglevel string) ( *http.Response, error) {
+@param name ID of name
+@param loglevel Defines the logging level of a service instance, from none (OFF) to the most verbose (TRACE)
+@return */
+func (a *K8sfilterApiService) UpdateK8sfilterLoglevelByID(name string, loglevel string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -1489,9 +1453,8 @@ func (a *K8sfilterApiService) UpdateK8sfilterLoglevelByID(name string, loglevel 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1502,7 +1465,7 @@ func (a *K8sfilterApiService) UpdateK8sfilterLoglevelByID(name string, loglevel 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1528,18 +1491,17 @@ func (a *K8sfilterApiService) UpdateK8sfilterLoglevelByID(name string, loglevel 
 	return localVarHttpResponse, err
 }
 
-
 /* K8sfilterApiService Update nodeport-range by ID
- Update operation of resource: nodeport-range
- @param name ID of name
- @param nodeportRange Port range used for NodePort services
- @return */
- func (a *K8sfilterApiService) UpdateK8sfilterNodeportRangeByID(name string, nodeportRange string) ( *http.Response, error) {
+Update operation of resource: nodeport-range
+@param name ID of name
+@param nodeportRange Port range used for NodePort services
+@return */
+func (a *K8sfilterApiService) UpdateK8sfilterNodeportRangeByID(name string, nodeportRange string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -1550,9 +1512,8 @@ func (a *K8sfilterApiService) UpdateK8sfilterLoglevelByID(name string, loglevel 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1563,7 +1524,7 @@ func (a *K8sfilterApiService) UpdateK8sfilterLoglevelByID(name string, loglevel 
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1590,18 +1551,18 @@ func (a *K8sfilterApiService) UpdateK8sfilterLoglevelByID(name string, loglevel 
 }
 
 /* K8sfilterApiService Update ports by ID
- Update operation of resource: ports
+Update operation of resource: ports
 
- @param name ID of name
- @param portsName ID of ports_name
- @param ports portsbody object
- @return */
-func (a *K8sfilterApiService) UpdateK8sfilterPortsByID(name string, portsName string, ports Ports) ( *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@param ports portsbody object
+@return */
+func (a *K8sfilterApiService) UpdateK8sfilterPortsByID(name string, portsName string, ports Ports) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -1613,9 +1574,8 @@ func (a *K8sfilterApiService) UpdateK8sfilterPortsByID(name string, portsName st
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1626,7 +1586,7 @@ func (a *K8sfilterApiService) UpdateK8sfilterPortsByID(name string, portsName st
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1653,17 +1613,17 @@ func (a *K8sfilterApiService) UpdateK8sfilterPortsByID(name string, portsName st
 }
 
 /* K8sfilterApiService Update ports by ID
- Update operation of resource: ports
+Update operation of resource: ports
 
- @param name ID of name
- @param ports portsbody object
- @return */
-func (a *K8sfilterApiService) UpdateK8sfilterPortsListByID(name string, ports []Ports) ( *http.Response, error) {
+@param name ID of name
+@param ports portsbody object
+@return */
+func (a *K8sfilterApiService) UpdateK8sfilterPortsListByID(name string, ports []Ports) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -1674,9 +1634,8 @@ func (a *K8sfilterApiService) UpdateK8sfilterPortsListByID(name string, ports []
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1687,7 +1646,7 @@ func (a *K8sfilterApiService) UpdateK8sfilterPortsListByID(name string, ports []
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1714,18 +1673,18 @@ func (a *K8sfilterApiService) UpdateK8sfilterPortsListByID(name string, ports []
 }
 
 /* K8sfilterApiService Update peer by ID
- Update operation of resource: peer
+Update operation of resource: peer
 
- @param name ID of name
- @param portsName ID of ports_name
- @param peer Peer name, such as a network interfaces (e.g., &#39;veth0&#39;) or another cube (e.g., &#39;br1:port2&#39;)
- @return */
-func (a *K8sfilterApiService) UpdateK8sfilterPortsPeerByID(name string, portsName string, peer string) ( *http.Response, error) {
+@param name ID of name
+@param portsName ID of ports_name
+@param peer Peer name, such as a network interfaces (e.g., &#39;veth0&#39;) or another cube (e.g., &#39;br1:port2&#39;)
+@return */
+func (a *K8sfilterApiService) UpdateK8sfilterPortsPeerByID(name string, portsName string, peer string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody interface{}
-		localVarFileName string
-		localVarFileBytes []byte
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
 	)
 
 	// create path and map variables
@@ -1737,9 +1696,8 @@ func (a *K8sfilterApiService) UpdateK8sfilterPortsPeerByID(name string, portsNam
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -1750,7 +1708,7 @@ func (a *K8sfilterApiService) UpdateK8sfilterPortsPeerByID(name string, portsNam
 	// to determine the Accept header
 	localVarHttpHeaderAccepts := []string{
 		"application/json",
-		}
+	}
 
 	// set Accept header
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
@@ -1775,4 +1733,3 @@ func (a *K8sfilterApiService) UpdateK8sfilterPortsPeerByID(name string, portsNam
 
 	return localVarHttpResponse, err
 }
-

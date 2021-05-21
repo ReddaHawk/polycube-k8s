@@ -50,7 +50,7 @@ func (r *NodeReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.
 	_ = r.Log.WithValues("node", req.NamespacedName)
 
 	// your logic here
-
+	r.Log.Info("reconcile node with " + req.Name + " " + req.String())
 	return ctrl.Result{}, nil
 }
 
