@@ -1,0 +1,21 @@
+{
+	"cniVersion": "0.2.0",
+	"name": "mynet",
+	"type": "polycube",
+	"bridge": "br0",
+	"mtu": 1500,
+	"vclustercdir": "1.1.1.0/24",
+	"ipam": {
+		"type": "host-local",
+		"ranges": [
+			[
+				{
+					"subnet": "10.10.30.0/24"
+				}
+			]
+		],
+		"routes": [
+			{ "dst": "0.0.0.0/0" }
+		]
+	}
+}
