@@ -12,6 +12,7 @@ import (
 	"github.com/containernetworking/plugins/pkg/ip"
 	"github.com/containernetworking/plugins/pkg/ipam"
 	"github.com/containernetworking/plugins/pkg/ns"
+	"github.com/polycube-network/polycube/src/components/k8s/utils"
 	lbrp "github.com/polycube-network/polycube/src/components/k8s/utils/lbrp"
 	simplebridge "github.com/polycube-network/polycube/src/components/k8s/utils/simplebridge"
 	log "github.com/sirupsen/logrus"
@@ -80,32 +81,33 @@ func loadNetConf(bytes []byte) (*NetConf, string, error) {
 }
 
 
-func createLbrp(ip string) error {
+func createLbrp(ip string) (string , error) {
 	// create lbrp with pod ip so it can be referenced by operator
 	name := "lbrp-" + ip
 
 
 	lbrpPortBackend := lbrp.Ports{
-		Name: "toSwitch",
+		Name: "to_switch",
 		Type_: "BACKEND",
 	}
 	lbrpPortFrontend := lbrp.Ports{
-		Name: "toPod",
+		Name: "to_pod",
 		Type_: "FRONTEND",
 	}
 	lbrpPorts := []lbrp.Ports{lbrpPortFrontend,lbrpPortBackend}
 	lb := lbrp.Lbrp{
 		Name: name,
 		Ports: lbrpPorts,
+		Loglevel: "DEBUG",
 	}
 	if response, err := lbrpAPI.CreateLbrpByID(context.TODO(), name, lb); err != nil {
 		log.Errorf("An error occurred while trying to create lbrp %s: error: %s, response: %+v", name, err, response)
-		return err
+		return "" ,err
 	}
 	log.Infof("lbrp %s successfully created", name)
 
 
-	return nil
+	return name, nil
 }
 
 func deleteLbrp(name string) {
@@ -243,19 +245,31 @@ func cmdAdd(args *skel.CmdArgs) error {
 	portName := args.ContainerID[0:10]
 	log.Info("ip is: "+ ip.String())
 	log.Info("port name is: "+portName)
+
 	switchPort := simplebridge.Ports{Name: portName}
 	if _, err := simplebridgeAPI.CreateSimplebridgePortsByID(context.TODO(),conf.BridgeName,portName,switchPort); err != nil {
 		return fmt.Errorf("Error creating port on switch: %s", err)
 	}
-	// create lbrp
-	nameLbrp := ip.String()
-	createLbrp(nameLbrp)
 
-	log.Debug("Connecting bridge <-> lbrp")
-	if _, err := simplebridgeAPI.UpdateSimplebridgePortsPeerByID(context.TODO(),
-		conf.BridgeName, portName, nameLbrp+":toSwitch"); err != nil {
-		return err
+
+	// create lbrp
+	nameLbrp , err := createLbrp(ip.String())
+	if err != nil {
+		return fmt.Errorf("Error creating lbrp: %s", err)
 	}
+
+	log.Debug("Connecting bridge <-> lbrp: " +nameLbrp+":toSwitch " + conf.BridgeName+":"+portName)
+	if _, err := lbrpAPI.UpdateLbrpPortsPeerByID(nil,
+		nameLbrp, "to_switch", utils.CreatePeer(conf.BridgeName,portName)); err != nil {
+		return fmt.Errorf("Error connecting lbrp %s to simplebridge %s:%s: %s ",nameLbrp,conf.BridgeName,portName, err.Error())
+	}
+	if _, err := simplebridgeAPI.UpdateSimplebridgePortsPeerByID(context.TODO(),
+		conf.BridgeName, portName, utils.CreatePeer(nameLbrp,"to_switch")); err != nil {
+		return fmt.Errorf("Error connecting simplebrige to lbrp %s: %s",nameLbrp, err.Error())
+	}
+
+	log.Info("finito")
+
 
 	return types.PrintResult(result,conf.CNIVersion)
 
