@@ -17,6 +17,7 @@ import (
 	simplebridge "github.com/polycube-network/polycube/src/components/k8s/utils/simplebridge"
 	log "github.com/sirupsen/logrus"
 	"github.com/vishvananda/netlink"
+	"golang.org/x/sys/unix"
 	"net"
 	"os"
 	"runtime"
@@ -179,6 +180,14 @@ func parseConfig(stdin []byte) (*NetConf, error) {
 
 	return &conf, nil
 }
+
+// Duplicate an ip
+func dupIP(ip net.IP) net.IP {
+	dup := make(net.IP, len(ip))
+	copy(dup, ip)
+	return dup
+}
+
 func cmdAdd(args *skel.CmdArgs) error {
 	log.Debug("cmdAdd requested")
 	conf, err := parseConfig(args.StdinData)
@@ -235,7 +244,6 @@ func cmdAdd(args *skel.CmdArgs) error {
 	}
 
 	result = &current.Result{
-		CNIVersion: current.ImplementedSpecVersion,
 		Interfaces: []*current.Interface{
 			hostInterface,
 			containerInterface,
@@ -267,15 +275,77 @@ func cmdAdd(args *skel.CmdArgs) error {
 		conf.BridgeName, portName, utils.CreatePeer(nameLbrp,"to_switch")); err != nil {
 		return fmt.Errorf("Error connecting simplebrige to lbrp %s: %s",nameLbrp, err.Error())
 	}
+	log.Debug("Connecting container <-> lbrp: "+nameLbrp+ hostInterface.Name)
+	var mac net.HardwareAddr
 
-	log.Info("finito")
+	gwLink, err := netlink.LinkByName(polycubeK8sInterface)
+	if err != nil {
+		fmt.Errorf("failed to lookup %s: %v", polycubeK8sInterface, err)
+	}
+	// Configure the container hardware address and IP address(es)
+	if err := netns.Do(func(_ ns.NetNS) error {
+		// configure interface "by hand" because ipam.ConfigureIface does not do
+		// what we want to
+		link, err := netlink.LinkByName(args.IfName)
+		if err != nil {
+			return fmt.Errorf("failed to lookup %q: %v", args.IfName, err)
+		}
 
+		mac = link.Attrs().HardwareAddr
 
-	return types.PrintResult(result,conf.CNIVersion)
+		if err := netlink.LinkSetUp(link); err != nil {
+			return fmt.Errorf("failed to set %q UP: %v", args.IfName, err)
+		}
 
-	//var mac net.HardwareAddr
+		// add ip with a /32 mask
+		ipnet := net.IPNet{IP: ip, Mask: net.IPv4Mask(0xFF, 0xFF, 0xFF, 0xFF)}
+		addr := &netlink.Addr{IPNet: &ipnet, Label: ""}
+		if err = netlink.AddrAdd(link, addr); err != nil {
+			return fmt.Errorf("Error configuring iface")
+		}
+		gw := dupIP(ip)
+		gw = gw.To4()
+		gw[3] = 0x01
+		gwNet := net.IPNet{IP: gw, Mask: net.IPv4Mask(0xFF, 0xFF, 0xFF, 0xFF)}
+		// add link local route to reach gw
+		gwRoute := netlink.Route{
+			Dst:       &gwNet,
+			Scope:     unix.RT_SCOPE_LINK,
+			LinkIndex: link.Attrs().Index}
+		if err := netlink.RouteAdd(&gwRoute); err != nil {
+			log.Error("error adding routing table to srciprewritten")
+			return err
+		}
 
-	//gwLink, err := netlink.LinkByName(polycubeK8sInterface)
+		defaultRoute := netlink.Route{
+			Dst: nil,
+			Gw:  gw,
+		}
+		if err := netlink.RouteAdd(&defaultRoute); err != nil {
+			log.Error("error adding routing table to srciprewritten")
+			return err
+		}
+		// add arp entry to reach gateway
+		arpentry := netlink.Neigh{
+			LinkIndex:    link.Attrs().Index,
+			State:        netlink.NUD_PERMANENT,
+			IP:           gw,
+			HardwareAddr: gwLink.Attrs().HardwareAddr,
+		}
+
+		if err := netlink.NeighAdd(&arpentry); err != nil {
+			log.Error("Error adding static arp entry")
+			return err
+		}
+		return nil
+
+	}); err != nil {
+		return err
+	}
+
+	// todo create arp entry
+
+	return types.PrintResult(result, conf.CNIVersion)
 }
 
 func main() {
